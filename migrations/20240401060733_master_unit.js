@@ -25,6 +25,8 @@ exports.up = function(knex) {
         return knex.schema.raw('CREATE INDEX idx_unit_owner ON master_unit (owner);');
     }).then(function() {
         return knex.schema.raw('CREATE INDEX idx_unit_brand ON master_unit (brand);');
+    }).then(function() {
+        return knex.schema.raw('CREATE INDEX idx_unit_fms ON master_unit (fms);');
     })
 }
 
