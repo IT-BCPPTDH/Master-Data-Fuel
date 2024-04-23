@@ -3,9 +3,9 @@ exports.up = function(knex) {
         table.increments('id').primary();
         table.text('code');
         table.text('name');
-        table.date('creation_date');
+        table.timestamp('creation_date').defaultTo(knex.fn.now());
         table.text('creation_by');
-        table.boolean('isDelete');
+        table.boolean('isDelete').defaultTo(false);
     }).then(function() {
       return knex.schema.raw('CREATE INDEX idx_site ON master_site (id);');
     }).then(function() {

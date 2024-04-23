@@ -1,26 +1,26 @@
 exports.up = function(knex) {
-    return knex.schema.createTable('master_prod_budget_by_material', function(table) {
+    return knex.schema.createTable('master_prod_budget', function(table) {
         table.increments('id').primary();
         table.text('model');
         table.text('digger');
-        table.text('ob');
-        table.text('coal');
-        table.text('ts');
+        table.float('ob');
+        table.float('coal');
+        table.float('ts');
         table.text('site');
-        table.date('creation_date');
+        table.timestamp('creation_date').defaultTo(knex.fn.now());
         table.text('creation_by');
-        table.boolean('isDelete');
+        table.boolean('isDelete').defaultTo(false);
     }).then(function() {
-        return knex.schema.raw('CREATE INDEX idx_prod_budget ON master_prod_budget_by_material (id);');
+        return knex.schema.raw('CREATE INDEX idx_prod_budget ON master_prod_budget (id);');
     }).then(function() {
-        return knex.schema.raw('CREATE INDEX idx_prod_budget_model ON master_prod_budget_by_material (model);');
+        return knex.schema.raw('CREATE INDEX idx_prod_budget_model ON master_prod_budget (model);');
     }).then(function() {
-        return knex.schema.raw('CREATE INDEX idx_prod_budget_site ON master_prod_budget_by_material (site);');
+        return knex.schema.raw('CREATE INDEX idx_prod_budget_site ON master_prod_budget (site);');
     }).then(function() {
-        return knex.schema.raw('CREATE INDEX idx_prod_budget_digger ON master_prod_budget_by_material (digger);');
+        return knex.schema.raw('CREATE INDEX idx_prod_budget_digger ON master_prod_budget (digger);');
     })
 };
 
 exports.down = function(knex) {
-    return knex.schema.dropTable('master_prod_budget_by_material');
+    return knex.schema.dropTable('master_prod_budget');
 };

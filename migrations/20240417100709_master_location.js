@@ -5,9 +5,9 @@ exports.up = function(knex) {
         table.text('location_name');
         table.text('location_type');
         table.text('site');
-        table.date('creation_date');
+        table.timestamp('creation_date').defaultTo(knex.fn.now());
         table.text('creation_by');
-        table.boolean('isDelete');
+        table.boolean('isDelete').defaultTo(false);
     }).then(function() {
         return knex.schema.raw('CREATE INDEX idx_location ON master_location (id);');
     }).then(function() {

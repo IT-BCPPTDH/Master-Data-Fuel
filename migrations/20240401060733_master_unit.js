@@ -9,8 +9,9 @@ exports.up = function(knex) {
     table.text('usage');
     table.boolean('fms').defaultTo(0);
     table.text('site');
-    table.date('creation_date');
+    table.timestamp('creation_date').defaultTo(knex.fn.now());
     table.text('creation_by');
+    table.boolean('isDelete').defaultTo(false);
     }).then(function() {
         return knex.schema.raw('CREATE INDEX idx_unit_no ON master_unit (unit_no);');
     }).then(function() {

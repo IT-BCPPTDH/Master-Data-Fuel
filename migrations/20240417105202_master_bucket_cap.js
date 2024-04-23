@@ -2,13 +2,13 @@ exports.up = function(knex) {
     return knex.schema.createTable('master_bucket_cap', function(table) {
         table.increments('id').primary();
         table.text('digger');
-        table.text('buck_cap_lcm');
-        table.text('buckAct_cap_lcm');
-        table.text('buckAct_cap_bcm');
+        table.float('buck_cap_lcm');
+        table.float('buckAct_cap_lcm');
+        table.float('buckAct_cap_bcm');
         table.text('site');
-        table.date('creation_date');
+        table.timestamp('creation_date').defaultTo(knex.fn.now());
         table.text('creation_by');
-        table.boolean('isDelete');
+        table.boolean('isDelete').defaultTo(false);
     }).then(function() {
         return knex.schema.raw('CREATE INDEX idx_bucket_cap ON master_bucket_cap (id);');
     }).then(function() {

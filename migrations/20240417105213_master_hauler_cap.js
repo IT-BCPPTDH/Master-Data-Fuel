@@ -2,13 +2,12 @@ exports.up = function(knex) {
     return knex.schema.createTable('master_hauler_cap', function(table) {
         table.increments('id').primary();
         table.text('hauler_type');
-        table.text('vessel_bcm');
-        table.text('vesselTON');
-        table.text('buckActCapBCM');
+        table.float('vessel_bcm');
+        table.float('vessel_ton');
         table.text('site');
-        table.date('creation_date');
+        table.timestamp('creation_date').defaultTo(knex.fn.now());
         table.text('creation_by');
-        table.boolean('isDelete');
+        table.boolean('isDelete').defaultTo(false);
     }).then(function() {
         return knex.schema.raw('CREATE INDEX idx_hauler_cap ON master_hauler_cap (id);');
     }).then(function() {
