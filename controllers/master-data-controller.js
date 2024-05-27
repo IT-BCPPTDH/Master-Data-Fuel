@@ -16,7 +16,8 @@ async function getAllActivity() {
         if(data){
             return {
               status: HTTP_STATUS.OK,
-              data: data.rows
+              data: data.rows,
+              totalRow: data.rows.length
             };
         }else{
             return {
@@ -38,7 +39,8 @@ async function getAllUnit() {
         if(data){
             return {
               status: HTTP_STATUS.OK,
-              data: data.rows
+              data: data.rows,
+              totalRow: data.rows.length
             };
         }else{
             return {
