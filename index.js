@@ -1,8 +1,8 @@
 const uWS = require('uWebSockets.js');
-
 const masterDataRoutes = require('./routes/master-data-routes')
+require('dotenv').config();
 
-const port = 9003;
+const port = process.env.PORT;
 const app = uWS.App();
 
 // Cors Setup
