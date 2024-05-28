@@ -13,6 +13,7 @@ module.exports = {
 async function getAllActivity() {
     try{
         const data = await db.query(QUERY_STRING.GET_ALL_ACTVITY)
+
         if(data){
             return {
               status: HTTP_STATUS.OK,
