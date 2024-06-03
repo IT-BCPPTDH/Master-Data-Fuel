@@ -8,6 +8,8 @@ exports.up = function(knex) {
         table.text('site');
         table.timestamp('creation_date').defaultTo(knex.fn.now());
         table.text('creation_by');
+        table.timestamp('updated_at').defaultTo(knex.fn.now());
+        table.text('updated_by');
         table.boolean('isDelete').defaultTo(false);
     }).then(function() {
         return knex.schema.raw('CREATE INDEX idx_bucket_cap ON master_bucket_cap (id);');

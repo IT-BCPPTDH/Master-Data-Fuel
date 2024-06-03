@@ -13,7 +13,10 @@ const HTTP_STATUS = {
 
 const STATUS_MESSAGE = {
     ERR_GET:'Something wrong',
-    NOT_FOUND:'Data not Found!'
+    NOT_FOUND:'Data not Found!',
+    UPDATE_DATA: 'Data has been updated succesfully!',
+    CREATED_DATA: 'Data has been created succesfully!',
+    DELETE_DATA: 'Data has been deleted succesfully!'
 }
 
 module.exports = {
