@@ -1,6 +1,15 @@
 const uWS = require('uWebSockets.js');
 
 const masterDataRoutes = require('./routes/master-data-routes')
+const masterDataActivityRoutes = require('./routes/master-data-activity-routes')
+const masterDataBucketCapRoutes = require('./routes/master-data-bucket-cap-routes')
+const masterDataHaulerCapRoutes = require('./routes/master-data-hauler-cap-routes')
+const masterDataLocationRoutes = require('./routes/master-data-location-routes')
+const masterDataMaterialRoutes = require('./routes/master-data-material-routes')
+const masterDataProdBudgetRoutes = require('./routes/master-data-prod-budget-routes')
+const masterDataSiteRoutes = require('./routes/master-data-site-routes')
+const masterDataTruckFactorRoutes = require('./routes/master-data-truck-factor-routes')
+const masterDataUnitRoutes = require('./routes/master-data-unit-routes')
 
 const port = 9003;
 const app = uWS.App();
@@ -30,6 +39,24 @@ app.get('/', (res, req) => {
 
 // routes
 masterDataRoutes(app);
+
+masterDataActivityRoutes(app)
+
+masterDataBucketCapRoutes(app)
+
+masterDataUnitRoutes(app)
+
+masterDataHaulerCapRoutes(app)
+
+masterDataLocationRoutes(app)
+
+masterDataMaterialRoutes(app)
+
+masterDataProdBudgetRoutes(app)
+
+masterDataSiteRoutes(app)
+
+masterDataTruckFactorRoutes(app)
 
 // // WebSocket route 
 // websocketRoute(app)
