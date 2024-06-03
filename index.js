@@ -1,6 +1,6 @@
 const uWS = require('uWebSockets.js');
-
 const masterDataRoutes = require('./routes/master-data-routes')
+
 const masterDataActivityRoutes = require('./routes/master-data-activity-routes')
 const masterDataBucketCapRoutes = require('./routes/master-data-bucket-cap-routes')
 const masterDataHaulerCapRoutes = require('./routes/master-data-hauler-cap-routes')
@@ -11,7 +11,10 @@ const masterDataSiteRoutes = require('./routes/master-data-site-routes')
 const masterDataTruckFactorRoutes = require('./routes/master-data-truck-factor-routes')
 const masterDataUnitRoutes = require('./routes/master-data-unit-routes')
 
-const port = 9003;
+require('dotenv').config();
+
+
+const port = process.env.PORT;
 const app = uWS.App();
 
 // Cors Setup
