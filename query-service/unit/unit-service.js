@@ -8,7 +8,7 @@ const insertToUnit = async (dataJson) => {
     try {
         const result = await db.query(QUERY_STRING.CREATE_UNIT, [dataJson.unit_no,
         dataJson.type, dataJson.brand, dataJson.category, dataJson.owner,
-        dataJson.usage, dataJson.fms, dataJson.site, dataJson.operator])
+        dataJson.usage, dataJson.site, dataJson.operator])
 
         if(result){
             return true
