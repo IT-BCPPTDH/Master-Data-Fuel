@@ -20,7 +20,7 @@ const QUERY_STRING = {
     GET_DETAIL_PROD_BUDGET:`SELECT * FROM master_prod_budget WHERE id = $1`,
 
     CREATE_ACTIVITY: `INSERT INTO master_activity (activity_name, delay_description, code, creation_by) VALUES ($1, $2, $3, $4)`,
-    CREATE_UNIT: `INSERT INTO master_unit (unit_no, type, brand, category, owner, usage, fms, site, creation_by) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)`,
+    CREATE_UNIT: `INSERT INTO master_unit (unit_no, type, brand, category, owner, usage, site, creation_by) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)`,
     CREATE_SITE: `INSERT INTO master_site (code, name, creation_by) VALUES ($1, $2, $3)`,
     CREATE_BUCKET_CAP: `INSERT INTO master_bucket_cap (digger, buck_cap_lcm, "buckAct_cap_lcm", "buckAct_cap_bcm", site, creation_by) VALUES ($1, $2, $3, $4, $5, $6)`,
     CREATE_HAULER_CAP: `INSERT INTO master_hauler_cap (hauler_type, vessel_bcm, vessel_ton, site, creation_by) VALUES ($1, $2, $3, $4, $5)`,
