@@ -138,11 +138,35 @@ async function bulkInsert(bulkData){
     }
 }
 
+async function conditionalUnit(arrayData) {
+    try{
+        const data = await db.query(QUERY_STRING.GET_UNIT_TRUCK, [arrayData])
+        if(data){
+            return {
+              status: HTTP_STATUS.OK,
+              data: data.rows,
+              totalRow: data.rows.length
+            };
+        }else{
+            return {
+                status: HTTP_STATUS.NOT_FOUND,
+                message: STATUS_MESSAGE.NOT_FOUND
+              };
+        }
+    }catch(error){
+        return {
+            status: HTTP_STATUS.BAD_REQUEST,
+            message: `${STATUS_MESSAGE.ERR_GET} ${error}`,
+          };
+    }
+}
+
 module.exports = { 
     getAllUnit,
     getDetailUnit,
     insertUnit,
     updateUnit,
     deleteUnit,
-    bulkInsert
+    bulkInsert,
+    conditionalUnit
 };

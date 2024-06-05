@@ -25,11 +25,16 @@ async function handleBulkInsertUnit(req,res){
     await handleResponseJson(req,res,masterController.bulkInsert)
 }
 
+async function handleConditionalUnit(req,res){
+    await handleResponseJson(req,res,masterController.conditionalUnit)
+}
+
 module.exports = {
     handleGetAllUnit,
     handleInsertUnit,
     handleGetUnit,
     handleDeleteUnit,
     handleUpdateUnit,
-    handleBulkInsertUnit
+    handleBulkInsertUnit,
+    handleConditionalUnit
 }

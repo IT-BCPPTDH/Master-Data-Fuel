@@ -7,77 +7,77 @@ exports.seed = async function(knex) {
   await knex('master_truck_factor').del()
   await knex('master_truck_factor').insert([
     {
-      "model": "DT-KL2450",
+      "model": "KL2450",
       "tf_ob_ts": 88,
       "tf_coal": 0,
       "site": "BCP",
       "creation_by": "TM"
     },
     {
-      "model": "DT-MT4400",
+      "model": "MT4400",
       "tf_ob_ts": 88,
       "tf_coal": 0,
       "site": "BCP",
       "creation_by": "TM"
     },
     {
-      "model": "DT-HD1500-7",
+      "model": "HD1500-7",
       "tf_ob_ts": 59.8,
       "tf_coal": 77.7,
       "site": "BCP",
       "creation_by": "TM"
     },
     {
-      "model": "DT-HD1500",
+      "model": "HD1500",
       "tf_ob_ts": 59.8,
       "tf_coal": 77.7,
       "site": "BCP",
       "creation_by": "TM"
     },
     {
-      "model": "DT-730E",
+      "model": "730E",
       "tf_ob_ts": 76.2,
       "tf_coal": 99.7,
       "site": "BCP",
       "creation_by": "TM"
     },
     {
-      "model": "DT-685E",
+      "model": "685E",
       "tf_ob_ts": 70,
       "tf_coal": 0,
       "site": "BCP",
       "creation_by": "TM"
     },
     {
-      "model": "DT-EH1100",
+      "model": "EH1100",
       "tf_ob_ts": 26.5,
       "tf_coal": 30.72,
       "site": "BCP",
       "creation_by": "TM"
     },
     {
-      "model": "DT-HD785",
+      "model": "HD785",
       "tf_ob_ts": 37.8,
       "tf_coal": 49.1,
       "site": "BCP",
       "creation_by": "TM"
     },
     {
-      "model": "DT-777A",
+      "model": "777A",
       "tf_ob_ts": 35,
       "tf_coal": 45,
       "site": "BCP",
       "creation_by": "TM"
     },
     {
-      "model": "DT-A40F",
+      "model": "A40F",
       "tf_ob_ts": 16.2,
       "tf_coal": 21,
       "site": "BCP",
       "creation_by": "TM"
     },
     {
-      "model": "DT-HD465",
+      "model": "HD465",
       "tf_ob_ts": 22.8,
       "tf_coal": 29.7,
       "site": "BCP",
@@ -98,7 +98,7 @@ exports.seed = async function(knex) {
       "creation_by": "TM"
     },
     {
-      "model": "DT-745",
+      "model": "745",
       "tf_ob_ts": 17,
       "tf_coal": 21,
       "site": "BCP",
@@ -133,7 +133,7 @@ exports.seed = async function(knex) {
       "creation_by": "TM"
     },
     {
-      "model": "DT-830E",
+      "model": "830E",
       "tf_ob_ts": 91.7,
       "tf_coal": 18,
       "site": "BCP",
@@ -147,7 +147,7 @@ exports.seed = async function(knex) {
       "creation_by": "TM"
     },
     {
-      "model": "DT-HD465_JB",
+      "model": "HD465_JB",
       "tf_ob_ts": 22.8,
       "tf_coal": 40,
       "site": "BCP",

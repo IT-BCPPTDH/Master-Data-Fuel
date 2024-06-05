@@ -38,6 +38,8 @@ const QUERY_STRING = {
     DELETE_TRUCK_FACTOR: `UPDATE master_truck_factor SET "isDelete" = true WHERE id = $1`,
     DELETE_PROD_BUDGET: `UPDATE master_prod_budget SET "isDelete" = true WHERE id = $1`,
     DELETE_MATERIAL: `UPDATE master_material SET "isDelete" = true WHERE id = $1`,
+
+    GET_UNIT_TRUCK : `SELECT * from public.fetch_unit_truck($1)`
 }
 
 module.exports = {
