@@ -7,4 +7,5 @@ module.exports = (app) => {
     app.patch('/master/unit/delete/:id',(req,res) => masterDataHandler.handleDeleteUnit(req,res));
     app.patch('/master/unit/edit',(req,res) => masterDataHandler.handleUpdateUnit(req,res));
     app.post('/master/unit/bulk-insert',(req,res) => masterDataHandler.handleBulkInsertUnit(req,res));
+    app.post('/master/unit/fetch-data',(req,res) => masterDataHandler.handleConditionalUnit(req,res));
 };
