@@ -2246,6 +2246,306 @@ exports.seed = async function(knex) {
       "owner": "SIS",
       "creation_by":"TM",
       "site":"BCP"
-    }
+    },
+    {
+      "unit_no": "EX5032",
+      "type": "EX2600",
+      "brand": "Hitachi",
+      "category": "Excavator",
+      "owner": "DH",
+      "usage": "production",
+      "site": "BCP",
+      "operator": "TM"
+    },
+    {
+      "unit_no": "EX4042",
+      "type": "PC2000",
+      "brand": "Komatsu",
+      "category": "Excavator",
+      "owner": "DH",
+      "usage": "production",
+      "site": "BCP",
+      "operator": "TM"
+    },
+    {
+      "unit_no": "DT2341",
+      "type": "HD785",
+      "brand": "Komatsu",
+      "category": "Dump Truck",
+      "owner": "DH",
+      "usage": "production",
+      "site": "BCP",
+      "operator": "TM"
+    },
+    {
+      "unit_no": "DT2405",
+      "type": "HD785",
+      "brand": "Komatsu",
+      "category": "Dump Truck",
+      "owner": "DH",
+      "usage": "production",
+      "site": "BCP",
+      "operator": "TM"
+    },
+    {
+      "unit_no": "DT2403",
+      "type": "HD785",
+      "brand": "Komatsu",
+      "category": "Dump Truck",
+      "owner": "DH",
+      "usage": "production",
+      "site": "BCP",
+      "operator": "TM"
+    },
+    {
+      "unit_no": "DT1527",
+      "type": "P360",
+      "brand": "Scania",
+      "category": "Dump Truck",
+      "owner": "DH",
+      "usage": "production",
+      "site": "BCP",
+      "operator": "TM"
+  },
+  {
+      "unit_no": "DT1550",
+      "type": "P360",
+      "brand": "Scania",
+      "category": "Dump Truck",
+      "owner": "DH",
+      "usage": "production",
+      "site": "BCP",
+      "operator": "TM"
+    },
+    { 
+      "unit_no": "DT1541",
+      "type": "P360",
+      "brand": "Scania",
+      "category": "Dump Truck",
+      "owner": "DH",
+      "usage": "production",
+      "site": "BCP",
+      "operator": "TM"
+    },
+    {
+      "unit_no": "DT1535",
+      "type": "P360",
+      "brand": "Scania",
+      "category": "Dump Truck",
+      "owner": "DH",
+      "usage": "production",
+      "site": "BCP",
+      "operator": "TM"
+    },
+    {
+      "unit_no": "DT1530",
+      "type": "P360",
+      "brand": "Scania",
+      "category": "Dump Truck",
+      "owner": "DH",
+      "usage": "production",
+      "site": "BCP",
+      "operator": "TM"
+    },
+    {
+      "unit_no": "DT1536",
+      "type": "P360",
+      "brand": "Scania",
+      "category": "Dump Truck",
+      "owner": "DH",
+      "usage": "production",
+      "site": "BCP",
+      "operator": "TM"
+    },
+    {
+      "unit_no": "DT1529",
+      "type": "P360",
+      "brand": "Scania",
+      "category": "Dump Truck",
+      "owner": "DH",
+      "usage": "production",
+      "site": "BCP",
+      "operator": "TM"
+    },
+    {
+      "unit_no": "DT1546",
+      "type": "P360",
+      "brand": "Scania",
+      "category": "Dump Truck",
+      "owner": "DH",
+      "usage": "production",
+      "site": "BCP",
+      "operator": "TM"
+    },
+    {
+      "unit_no": "DT1537",
+      "type": "P360",
+      "brand": "Scania",
+      "category": "Dump Truck",
+      "owner": "DH",
+      "usage": "production",
+      "site": "BCP",
+      "operator": "TM"
+    },
+    {
+      "unit_no": "DT1547",
+      "type": "P360",
+      "brand": "Scania",
+      "category": "Dump Truck",
+      "owner": "DH",
+      "usage": "production",
+      "site": "BCP",
+      "operator": "TM"
+    },
+    {
+      "unit_no": "DT1549",
+      "type": "P360",
+      "brand": "Scania",
+      "category": "Dump Truck",
+      "owner": "DH",
+      "usage": "production",
+      "site": "BCP",
+      "operator": "TM"
+    },
+    {
+      "unit_no": "DT1551",
+      "type": "P360",
+      "brand": "Scania",
+      "category": "Dump Truck",
+      "owner": "DH",
+      "usage": "production",
+      "site": "BCP",
+      "operator": "TM"
+    },
+    {
+      "unit_no": "DT1531",
+      "type": "P360",
+      "brand": "Scania",
+      "category": "Dump Truck",
+      "owner": "DH",
+      "usage": "production",
+      "site": "BCP",
+      "operator": "TM"
+    },
+    {
+      "unit_no": "DT1532",
+      "type": "P360",
+      "brand": "Scania",
+      "category": "Dump Truck",
+      "owner": "DH",
+      "usage": "production",
+      "site": "BCP",
+      "operator": "TM"
+    },
+    {
+      "unit_no": "DT1533",
+      "type": "P360",
+      "brand": "Scania",
+      "category": "Dump Truck",
+      "owner": "DH",
+      "usage": "production",
+      "site": "BCP",
+      "operator": "TM"
+    },
+    {
+      "unit_no": "DT1534",
+      "type": "P360",
+      "brand": "Scania",
+      "category": "Dump Truck",
+      "owner": "DH",
+      "usage": "production",
+      "site": "BCP",
+      "operator": "TM"
+    },
+    {
+      "unit_no": "DT1548",
+      "type": "P360",
+      "brand": "Scania",
+      "category": "Dump Truck",
+      "owner": "DH",
+      "usage": "production",
+      "site": "BCP",
+      "operator": "TM"
+    },
+    {
+      "unit_no": "DT1540",
+      "type": "P360",
+      "brand": "Scania",
+      "category": "Dump Truck",
+      "owner": "DH",
+      "usage": "production",
+      "site": "BCP",
+      "operator": "TM"
+    },
+    {
+      "unit_no": "TD1196",
+      "type": "D8T",
+      "brand": "Caterpillar",
+      "category": "Dump Truck",
+      "owner": "DH",
+      "usage": "support",
+      "site": "BCP",
+      "operator": "TM"
+    },
+    {
+      "unit_no": "HPU3358",
+      "type": "HH200",
+      "brand": "Metso",
+      "category": "Water Pump",
+      "owner": "PMP",
+      "usage": "support",
+      "site": "BCP",
+      "operator": "TM"
+    },
+    {
+      "unit_no": "HPU3357",
+      "type": "HH200",
+      "brand": "Metso",
+      "category": "Water Pump",
+      "owner": "PMP",
+      "usage": "support",
+      "site": "BCP",
+      "operator": "TM"
+    },
+    {
+      "unit_no": "HPU3365",
+      "type": "MF420",
+      "brand": "Multiflo",
+      "category": "Water Pump",
+      "owner": "PMP",
+      "usage": "support",
+      "site": "BCP",
+      "operator": "TM"
+    },
+    {
+      "unit_no": "HPU3372",
+      "type": "MF420",
+      "brand": "Multiflo",
+      "category": "Water Pump",
+      "owner": "CHI",
+      "usage": "support",
+      "site": "BCP",
+      "operator": "TM"
+    },
+    {
+      "unit_no": "HPU3301",
+      "type": "MF385GSS",
+      "brand": "Multiflo",
+      "category": "Water Pump",
+      "owner": "SIS",
+      "usage": "support",
+      "site": "BCP",
+      "operator": "TM"
+    },
+    {
+      "unit_no": "DR2028",
+      "type": "IDM30",
+      "brand": "Drilltech",
+      "category": "Drill",
+      "owner": "DH",
+      "usage": "support",
+      "site": "BCP",
+      "operator": "TM"
+    }  
   ]);
 };

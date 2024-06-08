@@ -4,6 +4,8 @@ exports.up = function(knex) {
         table.text('model');
         table.float('tf_ob_ts');
         table.float('tf_coal');
+        table.float('tf_mud_60');
+        table.float('tf_mud_40');
         table.text('site');
         table.timestamp('creation_date').defaultTo(knex.fn.now());
         table.text('creation_by');
