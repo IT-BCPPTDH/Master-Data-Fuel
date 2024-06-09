@@ -2255,7 +2255,7 @@ exports.seed = async function(knex) {
       "owner": "DH",
       "usage": "production",
       "site": "BCP",
-      "operator": "TM"
+      "creation_by": "TM"
     },
     {
       "unit_no": "EX4042",
@@ -2265,7 +2265,7 @@ exports.seed = async function(knex) {
       "owner": "DH",
       "usage": "production",
       "site": "BCP",
-      "operator": "TM"
+      "creation_by": "TM"
     },
     {
       "unit_no": "DT2341",
@@ -2275,7 +2275,7 @@ exports.seed = async function(knex) {
       "owner": "DH",
       "usage": "production",
       "site": "BCP",
-      "operator": "TM"
+      "creation_by": "TM"
     },
     {
       "unit_no": "DT2405",
@@ -2285,7 +2285,7 @@ exports.seed = async function(knex) {
       "owner": "DH",
       "usage": "production",
       "site": "BCP",
-      "operator": "TM"
+      "creation_by": "TM"
     },
     {
       "unit_no": "DT2403",
@@ -2295,7 +2295,7 @@ exports.seed = async function(knex) {
       "owner": "DH",
       "usage": "production",
       "site": "BCP",
-      "operator": "TM"
+      "creation_by": "TM"
     },
     {
       "unit_no": "DT1527",
@@ -2305,7 +2305,7 @@ exports.seed = async function(knex) {
       "owner": "DH",
       "usage": "production",
       "site": "BCP",
-      "operator": "TM"
+      "creation_by": "TM"
   },
   {
       "unit_no": "DT1550",
@@ -2315,7 +2315,7 @@ exports.seed = async function(knex) {
       "owner": "DH",
       "usage": "production",
       "site": "BCP",
-      "operator": "TM"
+      "creation_by": "TM"
     },
     { 
       "unit_no": "DT1541",
@@ -2325,7 +2325,7 @@ exports.seed = async function(knex) {
       "owner": "DH",
       "usage": "production",
       "site": "BCP",
-      "operator": "TM"
+      "creation_by": "TM"
     },
     {
       "unit_no": "DT1535",
@@ -2335,7 +2335,7 @@ exports.seed = async function(knex) {
       "owner": "DH",
       "usage": "production",
       "site": "BCP",
-      "operator": "TM"
+      "creation_by": "TM"
     },
     {
       "unit_no": "DT1530",
@@ -2345,7 +2345,7 @@ exports.seed = async function(knex) {
       "owner": "DH",
       "usage": "production",
       "site": "BCP",
-      "operator": "TM"
+      "creation_by": "TM"
     },
     {
       "unit_no": "DT1536",
@@ -2355,7 +2355,7 @@ exports.seed = async function(knex) {
       "owner": "DH",
       "usage": "production",
       "site": "BCP",
-      "operator": "TM"
+      "creation_by": "TM"
     },
     {
       "unit_no": "DT1529",
@@ -2365,7 +2365,7 @@ exports.seed = async function(knex) {
       "owner": "DH",
       "usage": "production",
       "site": "BCP",
-      "operator": "TM"
+      "creation_by": "TM"
     },
     {
       "unit_no": "DT1546",
@@ -2375,7 +2375,7 @@ exports.seed = async function(knex) {
       "owner": "DH",
       "usage": "production",
       "site": "BCP",
-      "operator": "TM"
+      "creation_by": "TM"
     },
     {
       "unit_no": "DT1537",
@@ -2385,7 +2385,7 @@ exports.seed = async function(knex) {
       "owner": "DH",
       "usage": "production",
       "site": "BCP",
-      "operator": "TM"
+      "creation_by": "TM"
     },
     {
       "unit_no": "DT1547",
@@ -2395,7 +2395,7 @@ exports.seed = async function(knex) {
       "owner": "DH",
       "usage": "production",
       "site": "BCP",
-      "operator": "TM"
+      "creation_by": "TM"
     },
     {
       "unit_no": "DT1549",
@@ -2405,7 +2405,7 @@ exports.seed = async function(knex) {
       "owner": "DH",
       "usage": "production",
       "site": "BCP",
-      "operator": "TM"
+      "creation_by": "TM"
     },
     {
       "unit_no": "DT1551",
@@ -2415,7 +2415,7 @@ exports.seed = async function(knex) {
       "owner": "DH",
       "usage": "production",
       "site": "BCP",
-      "operator": "TM"
+      "creation_by": "TM"
     },
     {
       "unit_no": "DT1531",
@@ -2425,7 +2425,7 @@ exports.seed = async function(knex) {
       "owner": "DH",
       "usage": "production",
       "site": "BCP",
-      "operator": "TM"
+      "creation_by": "TM"
     },
     {
       "unit_no": "DT1532",
@@ -2435,7 +2435,7 @@ exports.seed = async function(knex) {
       "owner": "DH",
       "usage": "production",
       "site": "BCP",
-      "operator": "TM"
+      "creation_by": "TM"
     },
     {
       "unit_no": "DT1533",
@@ -2445,7 +2445,7 @@ exports.seed = async function(knex) {
       "owner": "DH",
       "usage": "production",
       "site": "BCP",
-      "operator": "TM"
+      "creation_by": "TM"
     },
     {
       "unit_no": "DT1534",
@@ -2455,7 +2455,7 @@ exports.seed = async function(knex) {
       "owner": "DH",
       "usage": "production",
       "site": "BCP",
-      "operator": "TM"
+      "creation_by": "TM"
     },
     {
       "unit_no": "DT1548",
@@ -2465,7 +2465,7 @@ exports.seed = async function(knex) {
       "owner": "DH",
       "usage": "production",
       "site": "BCP",
-      "operator": "TM"
+      "creation_by": "TM"
     },
     {
       "unit_no": "DT1540",
@@ -2475,7 +2475,7 @@ exports.seed = async function(knex) {
       "owner": "DH",
       "usage": "production",
       "site": "BCP",
-      "operator": "TM"
+      "creation_by": "TM"
     },
     {
       "unit_no": "TD1196",
@@ -2485,7 +2485,7 @@ exports.seed = async function(knex) {
       "owner": "DH",
       "usage": "support",
       "site": "BCP",
-      "operator": "TM"
+      "creation_by": "TM"
     },
     {
       "unit_no": "HPU3358",
@@ -2495,7 +2495,7 @@ exports.seed = async function(knex) {
       "owner": "PMP",
       "usage": "support",
       "site": "BCP",
-      "operator": "TM"
+      "creation_by": "TM"
     },
     {
       "unit_no": "HPU3357",
@@ -2505,7 +2505,7 @@ exports.seed = async function(knex) {
       "owner": "PMP",
       "usage": "support",
       "site": "BCP",
-      "operator": "TM"
+      "creation_by": "TM"
     },
     {
       "unit_no": "HPU3365",
@@ -2515,7 +2515,7 @@ exports.seed = async function(knex) {
       "owner": "PMP",
       "usage": "support",
       "site": "BCP",
-      "operator": "TM"
+      "creation_by": "TM"
     },
     {
       "unit_no": "HPU3372",
@@ -2525,7 +2525,7 @@ exports.seed = async function(knex) {
       "owner": "CHI",
       "usage": "support",
       "site": "BCP",
-      "operator": "TM"
+      "creation_by": "TM"
     },
     {
       "unit_no": "HPU3301",
@@ -2535,7 +2535,7 @@ exports.seed = async function(knex) {
       "owner": "SIS",
       "usage": "support",
       "site": "BCP",
-      "operator": "TM"
+      "creation_by": "TM"
     },
     {
       "unit_no": "DR2028",
@@ -2545,7 +2545,7 @@ exports.seed = async function(knex) {
       "owner": "DH",
       "usage": "support",
       "site": "BCP",
-      "operator": "TM"
+      "creation_by": "TM"
     }  
   ]);
 };
