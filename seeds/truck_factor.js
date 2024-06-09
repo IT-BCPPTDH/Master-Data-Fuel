@@ -202,7 +202,7 @@ exports.seed = async function(knex) {
       "tf_mud_60": 9.72,
       "tf_mud_40": 6.48,
       "site": "BCP",
-      "operator": "TM"
+      "creation_by": "TM"
   },
   {
       "model": "773E",
@@ -211,7 +211,7 @@ exports.seed = async function(knex) {
       "tf_mud_60": 14.4,
       "tf_mud_40": 9.6,
       "site": "BCP",
-      "operator": "TM"
+      "creation_by": "TM"
   },
   {
       "model": "HD785-7",
@@ -220,7 +220,7 @@ exports.seed = async function(knex) {
       "tf_mud_60": 24,
       "tf_mud_40": 16,
       "site": "BCP",
-      "operator": "TM"
+      "creation_by": "TM"
   },
   {
       "model": "HD7857HB",
@@ -229,7 +229,7 @@ exports.seed = async function(knex) {
       "tf_mud_60": 24,
       "tf_mud_40": 16,
       "site": "BCP",
-      "operator": "TM"
+      "creation_by": "TM"
   },
   {
       "model": "HD785-JB",
@@ -238,7 +238,7 @@ exports.seed = async function(knex) {
       "tf_mud_60": 38.4,
       "tf_mud_40": 25.6,
       "site": "BCP",
-      "operator": "TM"
+      "creation_by": "TM"
   },
   {
       "model": "HD465HB",
@@ -247,7 +247,7 @@ exports.seed = async function(knex) {
       "tf_mud_60": 13.68,
       "tf_mud_40": 9.12,
       "site": "BCP",
-      "operator": "TM"
+      "creation_by": "TM"
   },
   {
       "model": "75131",
@@ -256,7 +256,7 @@ exports.seed = async function(knex) {
       "tf_mud_60": 33.54,
       "tf_mud_40": 22.36,
       "site": "BCP",
-      "operator": "TM"
+      "creation_by": "TM"
   },
   {
       "model": "FM260-5",
@@ -265,7 +265,7 @@ exports.seed = async function(knex) {
       "tf_mud_60": 6,
       "tf_mud_40": 4,
       "site": "BCP",
-      "operator": "TM"
+      "creation_by": "TM"
   },
   {
       "model": "CAT745",
@@ -274,7 +274,7 @@ exports.seed = async function(knex) {
       "tf_mud_60": 10.2,
       "tf_mud_40": 6.8,
       "site": "BCP",
-      "operator": "TM"
+      "creation_by": "TM"
   },
   {
       "model": "777DHB",
@@ -283,7 +283,7 @@ exports.seed = async function(knex) {
       "tf_mud_60": 24,
       "tf_mud_40": 16,
       "site": "BCP",
-      "operator": "TM"
+      "creation_by": "TM"
   },
   {
       "model": "HD1500-5",
@@ -292,7 +292,7 @@ exports.seed = async function(knex) {
       "tf_mud_60": 35.88,
       "tf_mud_40": 23.92,
       "site": "BCP",
-      "operator": "TM"
+      "creation_by": "TM"
   },
   {
       "model": "775F",
@@ -301,7 +301,7 @@ exports.seed = async function(knex) {
       "tf_mud_60": 16.8,
       "tf_mud_40": 11.2,
       "site": "BCP",
-      "operator": "TM"
+      "creation_by": "TM"
   },
   {
       "model": "T252",
@@ -310,7 +310,7 @@ exports.seed = async function(knex) {
       "tf_mud_60": 84,
       "tf_mud_40": 56,
       "site": "BCP",
-      "operator": "TM"
+      "creation_by": "TM"
   },
   {
       "model": "P360-01",
@@ -319,7 +319,7 @@ exports.seed = async function(knex) {
       "tf_mud_60": 84,
       "tf_mud_40": 56,
       "site": "BCP",
-      "operator": "TM"
+      "creation_by": "TM"
   },
   {
       "model": "X60",
@@ -328,7 +328,7 @@ exports.seed = async function(knex) {
       "tf_mud_60": 0,
       "tf_mud_40": 0,
       "site": "BCP",
-      "operator": "TM"
+      "creation_by": "TM"
   },
   {
       "model": "A40E",
@@ -337,7 +337,7 @@ exports.seed = async function(knex) {
       "tf_mud_60": 10.38,
       "tf_mud_40": 6.92,
       "site": "BCP",
-      "operator": "TM"
+      "creation_by": "TM"
   },
   {
       "model": "P360-1",
@@ -346,7 +346,7 @@ exports.seed = async function(knex) {
       "tf_mud_60": 7.2,
       "tf_mud_40": 4.8,
       "site": "BCP",
-      "operator": "TM"
+      "creation_by": "TM"
   },
   {
       "model": "FM260",
@@ -355,7 +355,7 @@ exports.seed = async function(knex) {
       "tf_mud_60": 4.8,
       "tf_mud_40": 3.2,
       "site": "BCP",
-      "operator": "TM"
+      "creation_by": "TM"
   }
    ]);
 };
