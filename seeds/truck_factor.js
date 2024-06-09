@@ -112,7 +112,7 @@ exports.seed = async function(knex) {
       "creation_by": "TM"
     },
     {
-      "model": "HM400-01",
+      "model": "HM400",
       "tf_ob_ts": 15.2,
       "tf_coal": 19.7,
       "site": "BCP",
