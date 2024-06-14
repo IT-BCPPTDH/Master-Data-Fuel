@@ -140,7 +140,9 @@ async function bulkInsert(bulkData){
 
 async function conditionalUnit(arrayData) {
     try{
+    
         const data = await db.query(QUERY_STRING.GET_UNIT_TRUCK, [arrayData])
+        
         if(data){
             return {
               status: HTTP_STATUS.OK,
