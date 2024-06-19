@@ -12,7 +12,7 @@ const masterDataTruckFactorRoutes = require('./routes/master-data-truck-factor-r
 const masterDataUnitRoutes = require('./routes/master-data-unit-routes')
 
 require('dotenv').config();
-
+require('./proto/server/server')
 
 const port = process.env.PORT;
 const app = uWS.App();

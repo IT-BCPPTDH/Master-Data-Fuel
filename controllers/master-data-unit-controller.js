@@ -163,6 +163,21 @@ async function conditionalUnit(arrayData) {
     }
 }
 
+const conditionalUnitProto = async(call,callback) => {
+    
+    let data = await db.query(QUERY_STRING.GET_UNIT_TRUCK, [call.request.data])
+
+    if(data.rows.length > 0){
+        data = JSON.stringify(data.rows,null,3)
+        
+        let result = {data:data}
+        callback(null,result)
+    }else{
+        let result = {data:[]}
+        callback(null,result)
+    }
+}
+
 module.exports = { 
     getAllUnit,
     getDetailUnit,
@@ -170,5 +185,6 @@ module.exports = {
     updateUnit,
     deleteUnit,
     bulkInsert,
-    conditionalUnit
+    conditionalUnit,
+    conditionalUnitProto
 };

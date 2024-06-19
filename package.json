@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "seed:run":"knex seed:run",
+    "seed:run": "knex seed:run",
     "migrate:latest": "knex migrate:latest",
     "migrate:rollback": "knex migrate:rollback",
     "start": "nodemon index.js"
@@ -14,6 +14,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@grpc/grpc-js": "^1.10.9",
     "bcrypt": "^5.1.1",
     "dotenv": "^16.4.5",
     "knex": "^3.1.0",
