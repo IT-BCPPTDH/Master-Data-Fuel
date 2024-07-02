@@ -8,6 +8,8 @@ const QUERY_STRING = {
     GET_ALL_HAULER_CAP: `SELECT * FROM master_hauler_cap`,
     GET_ALL_TRUCK_FACTOR: `SELECT * FROM master_truck_factor`,
     GET_ALL_PROD_BUDGET: `SELECT * FROM master_prod_budget`,
+    GET_ALL_OPERATOR: `SELECT * FROM master_operator_kimper WHERE "isDelete" = false ORDER BY id ASC `,
+    GET_ALL_OPERATOR_UNIT: `SELECT * FROM master_unit WHERE unit_no = $1`,
 
     GET_DETAIL_ACTIVITY:`SELECT * FROM master_activity WHERE id = $1`,
     GET_DETAIL_UNIT:`SELECT * FROM master_unit WHERE id = $1`,
@@ -18,6 +20,7 @@ const QUERY_STRING = {
     GET_DETAIL_LOCATION:`SELECT * FROM master_location WHERE id = $1`,
     GET_DETAIL_TRUCK_FACTOR:`SELECT * FROM master_truck_factor WHERE id = $1`,
     GET_DETAIL_PROD_BUDGET:`SELECT * FROM master_prod_budget WHERE id = $1`,
+    GET_DETAIL_OPERATOR:`SELECT * FROM master_operator_kimper WHERE id = $1`,
 
     CREATE_ACTIVITY: `INSERT INTO master_activity (activity_name, delay_description, code, creation_by) VALUES ($1, $2, $3, $4)`,
     CREATE_UNIT: `INSERT INTO master_unit (unit_no, type, brand, category, owner, usage, site, creation_by) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)`,
@@ -38,6 +41,7 @@ const QUERY_STRING = {
     DELETE_TRUCK_FACTOR: `UPDATE master_truck_factor SET "isDelete" = true WHERE id = $1`,
     DELETE_PROD_BUDGET: `UPDATE master_prod_budget SET "isDelete" = true WHERE id = $1`,
     DELETE_MATERIAL: `UPDATE master_material SET "isDelete" = true WHERE id = $1`,
+    DELETE_OPERATOR: `UPDATE master_operator_kimper SET "isDelete" = true WHERE id = $1`,
 
     GET_UNIT_TRUCK : `SELECT * from public.fetch_unit_truck($1)`
 }
