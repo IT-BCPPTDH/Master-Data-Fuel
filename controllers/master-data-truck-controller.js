@@ -50,6 +50,7 @@ async function getDetailTruckFactor(id){
 }
 
 async function insertTruckFactor(postData) {
+   
     try{
         const data = await insertToTruckFactor(postData)
 

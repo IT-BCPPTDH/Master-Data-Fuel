@@ -28,7 +28,7 @@ const QUERY_STRING = {
     CREATE_BUCKET_CAP: `INSERT INTO master_bucket_cap (digger, buck_cap_lcm, "buckAct_cap_lcm", "buckAct_cap_bcm", site, creation_by) VALUES ($1, $2, $3, $4, $5, $6)`,
     CREATE_HAULER_CAP: `INSERT INTO master_hauler_cap (hauler_type, vessel_bcm, vessel_ton, site, creation_by) VALUES ($1, $2, $3, $4, $5)`,
     CREATE_LOCATION: `INSERT INTO master_location (location_code, location_name, location_type, site, creation_by) VALUES ($1, $2, $3, $4, $5)`,
-    CREATE_TRUCK_FACTOR: `INSERT INTO master_truck_factor (model, tf_ob_ts, tf_coal, site, creation_by) VALUES ($1, $2, $3, $4, $5)`,
+    CREATE_TRUCK_FACTOR: `INSERT INTO master_truck_factor (model, tf_ob_ts, tf_coal, tf_mud_60, tf_mud_40, site, creation_by) VALUES ($1, $2, $3, $4, $5 ,$6 ,$7)`,
     CREATE_PROD_BUDGET: `INSERT INTO master_prod_budget (model, digger, ob, coal, ts, site, creation_by) VALUES ($1, $2, $3, $4, $5, $6, $7)`,
     CREATE_MATERIAL: `INSERT INTO master_material (material_code, material_code_prod, material_name, treatment_factor, site, creation_by) VALUES ($1, $2, $3, $4, $5, $6)`,
 

@@ -7,7 +7,7 @@ const { QUERY_STRING } = require('../../helpers/queryEnumHelper')
 const insertToTruckFactor = async (dataJson) => {
     try {
         const result = await db.query(QUERY_STRING.CREATE_TRUCK_FACTOR, [dataJson.model,
-        dataJson.tf_ob_ts, dataJson.tf_coal, dataJson.site, dataJson.operator])
+        dataJson.tf_ob_ts, dataJson.tf_coal, dataJson.tf_mud_60, dataJson.tf_mud_40, dataJson.site, dataJson.operator])
 
         if(result){
             return true
