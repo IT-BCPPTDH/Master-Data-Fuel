@@ -30,7 +30,7 @@ async function handleSearchOperator(req,res){
 }
 
 async function handleOperatorById(req,res){
-    await handleResponseJson(req,res, masterOperatorController.getOperatorById, 0)
+    await handleResponseParams(req,res, masterOperatorController.getOperatorById, 2)
 }
 
 module.exports = {
