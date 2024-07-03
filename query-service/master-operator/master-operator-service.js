@@ -78,9 +78,8 @@ const editOperator = async (updateFields) => {
 const queryOperator = async(data) => {
     try {
 
-        const query = `SELECT emp_id, emp_name FROM master_operator_kimper WHERE "${data}" = $1`  
-        const result = await db.query(query, [true])
-        console.log(query)
+        const query = `SELECT emp_id FROM master_operator_kimper WHERE "isDelete" = false`  
+        const result = await db.query(query)
 
         if(result){
             return result
@@ -94,11 +93,11 @@ const queryOperator = async(data) => {
     }
 }
 
-const getOperatorIds= async(data) => {
+const getOperatorIds= async(id, model) => {
     try {
 
-        const query = `SELECT "${data[0]}" FROM master_operator_kimper WHERE "emp_id" = $1`  
-        const result = await db.query(query, [data[1]])
+        const query = `SELECT "${model}" FROM master_operator_kimper WHERE "emp_id" = $1`  
+        const result = await db.query(query, [id])
 
         if(result){
             return result

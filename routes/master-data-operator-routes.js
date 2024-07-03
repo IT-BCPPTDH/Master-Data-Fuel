@@ -7,6 +7,6 @@ module.exports = (app) => {
     app.put('/master/operator/delete',(req,res) => masterDataHandler.handleDeleteOperator(req,res));
     app.put('/master/operator/edit',(req,res) => masterDataHandler.handleUpdateOperator(req,res));
     app.get('/master/operator/bulk-insert',(req,res) => masterDataHandler.handleBulkInsertOperator(req,res));
-    app.get('/master/operator/get-operator-by-unit',(req,res) => masterDataHandler.handleSearchOperator(req,res));
-    app.get('/master/operator/get-operator-by-id',(req,res) => masterDataHandler.handleOperatorById(req,res));
+    app.get('/master/operator/get-operator-id',(req,res) => masterDataHandler.handleSearchOperator(req,res));
+    app.get('/master/operator/get-operator-by-model/:id/:model',(req,res) => masterDataHandler.handleOperatorById(req,res));
 };

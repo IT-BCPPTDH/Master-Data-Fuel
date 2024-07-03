@@ -162,9 +162,9 @@ const getOperatorByUnit = async(dataJson) => {
     }
 }
 
-const getOperatorById = async(dataJson) => {
+const getOperatorById = async(id, model) => {
     try{
-        const data = await getOperatorIds(dataJson)
+        const data = await getOperatorIds(id, model)
         if(data){
             return {
               status: HTTP_STATUS.OK,
