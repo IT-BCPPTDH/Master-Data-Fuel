@@ -11,6 +11,7 @@ const masterDataSiteRoutes = require('./routes/master-data-site-routes')
 const masterDataTruckFactorRoutes = require('./routes/master-data-truck-factor-routes')
 const masterDataUnitRoutes = require('./routes/master-data-unit-routes')
 const masterDataOperatorRoutes = require('./routes/master-data-operator-routes')
+const masterDataStationRoutes = require('./routes/master-data-station-routes')
 
 require('dotenv').config();
 require('./proto/server/server')
@@ -63,6 +64,8 @@ masterDataSiteRoutes(app)
 masterDataTruckFactorRoutes(app)
 
 masterDataOperatorRoutes(app)
+
+masterDataStationRoutes(app)
 
 // // WebSocket route 
 // websocketRoute(app)
