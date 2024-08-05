@@ -10,6 +10,7 @@ const QUERY_STRING = {
     GET_ALL_PROD_BUDGET: `SELECT * FROM master_prod_budget`,
     GET_ALL_OPERATOR: `SELECT * FROM master_operator_kimper WHERE "isDelete" = false ORDER BY id ASC `,
     GET_ALL_OPERATOR_UNIT: `SELECT * FROM master_unit WHERE unit_no = $1`,
+    GET_ALL_STATION: `SELECT * FROM master_station WHERE "isDelete" = false`,
 
     GET_DETAIL_ACTIVITY:`SELECT * FROM master_activity WHERE id = $1`,
     GET_DETAIL_UNIT:`SELECT * FROM master_unit WHERE id = $1`,
@@ -43,7 +44,8 @@ const QUERY_STRING = {
     DELETE_MATERIAL: `UPDATE master_material SET "isDelete" = true WHERE id = $1`,
     DELETE_OPERATOR: `UPDATE master_operator_kimper SET "isDelete" = true WHERE id = $1`,
 
-    GET_UNIT_TRUCK : `SELECT * from public.fetch_unit_truck($1)`
+    GET_UNIT_TRUCK : `SELECT * from public.fetch_unit_truck($1)`,
+    GET_STATION_BY_NAME: `SELECT * FROM master_station WHERE fuel_station_name = $1 AND "isDelete" = false`,
 }
 
 module.exports = {
