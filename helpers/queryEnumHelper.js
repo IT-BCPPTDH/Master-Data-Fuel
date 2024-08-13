@@ -46,6 +46,21 @@ const QUERY_STRING = {
 
     GET_UNIT_TRUCK : `SELECT * from public.fetch_unit_truck($1)`,
     GET_STATION_BY_NAME: `SELECT * FROM master_station WHERE fuel_station_name = $1 AND "isDelete" = false`,
+    GET_DETAIL_STATION:`SELECT * FROM master_station WHERE id = $1 AND "isDelete" = false`,
+    DELETE_STATION: `UPDATE master_station SET "isDelete" = true WHERE id = $1`,
+
+    GET_ALL_SONDING_MASTER: `SELECT * FROM master_sonding WHERE "isDelete" = false`,
+    GET_DETAIL_SONDING_MASTER:`SELECT * FROM master_sonding WHERE id = $1 AND "isDelete" = false`,
+    DELETE_SONDING_MASTER: `UPDATE master_sonding SET "isDelete" = true WHERE id = $1`,
+
+    GET_ALL_UNIT_BANLAW: `SELECT * FROM master_unit_banlaws WHERE "isDelete" = false`,
+    GET_DETAIL_UNIT_BANLAW:`SELECT * FROM master_unit_banlaws WHERE id = $1 AND "isDelete" = false`,
+    DELETE_UNIT_BANLAW: `UPDATE master_unit_banlaws SET "isDelete" = true WHERE id = $1`,
+
+    GET_ALL_MASTER_ELIPSE: `SELECT * FROM master_elipses WHERE "isDelete" = false`,
+    GET_DETAIL_MASTER_ELIPSE:`SELECT * FROM master_elipses WHERE id = $1 AND "isDelete" = false`,
+    DELETE_MASTER_ELIPSE: `UPDATE master_elipses SET "isDelete" = true WHERE id = $1`,
+
 }
 
 module.exports = {

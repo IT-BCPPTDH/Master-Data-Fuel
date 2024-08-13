@@ -9,7 +9,7 @@ exports.up = function(knex) {
     table.text('usage');
     table.boolean('fms').defaultTo(0);
     table.text('site');
-    table.boolean('is_setup_unit').defaultTo(0);;
+    table.boolean('is_setup_unit').defaultTo(0);
     table.timestamp('creation_date').defaultTo(knex.fn.now());
     table.text('creation_by');
     table.timestamp('updated_at').defaultTo(knex.fn.now());

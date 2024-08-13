@@ -3,18 +3,18 @@ const knex = require('knex');
 const knexConfig = require('../../knexfile');
 const dbKnex = knex(knexConfig);
 
-const insertToStation = async (dataJson) => {
+const insertToSonding = async (dataJson) => {
     try {
         const sanitizedColumns = Object.keys(dataJson).map(key => `"${key}"`);
         const valuesPlaceholders = sanitizedColumns.map((_, idx) => `$${idx + 1}`).join(', ');
 
-        const createStationQuery = `
-          INSERT INTO master_station (${sanitizedColumns.join(', ')})
+        const createQuery = `
+          INSERT INTO master_sonding (${sanitizedColumns.join(', ')})
           VALUES (${valuesPlaceholders})
         `;
 
         const values = Object.keys(dataJson).map(key => dataJson[key]);
-        const result = await db.query(createStationQuery, values);
+        const result = await db.query(createQuery, values);
 
         if(result){
             return true
@@ -27,7 +27,7 @@ const insertToStation = async (dataJson) => {
     }
 }
 
-const editStation = async (updateFields) => {
+const editSondingMaster = async (updateFields) => {
     try {
         const setClauses = Object.keys(updateFields)
             .filter(field => field !== 'id')  
@@ -40,7 +40,7 @@ const editStation = async (updateFields) => {
 
         values.push(updateFields.id);
 
-        const query = `UPDATE master_station SET ${setClauses} WHERE id = $${values.length}`;
+        const query = `UPDATE master_sonding SET ${setClauses} WHERE id = $${values.length}`;
         const result = await db.query(query, values)
 
         if(result){
@@ -56,6 +56,6 @@ const editStation = async (updateFields) => {
 }
 
 module.exports = {
-    insertToStation,
-    editStation
+    insertToSonding,
+    editSondingMaster
 }
