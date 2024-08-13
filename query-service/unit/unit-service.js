@@ -69,23 +69,30 @@ const editUnit = async (updateFields) => {
 
 const editData = async (data) => {
     try {
-        const unitCodes = data.setup_unit;
+        if (!data || !data.setup_unit || !Array.isArray(data.setup_unit) || data.setup_unit.length === 0) {
+            console.error('Data is missing or invalid');
+            return;
+        }
+        const conditions = data.setup_unit.map((item, index) => `($${index * 2 + 1}, $${index * 2 + 2})`).join(', ');
+        const values = data.setup_unit.flatMap(item => [item.unit_no, item.type]);
 
-        const unitPlaceholders = unitCodes.map((_, index) => `$${index + 1}`).join(', ');
-    
+
+        if (values.length === 0) {
+            console.error('No unit numbers and types to update');
+            return;
+        }
         const updateUnitQuery = `
             UPDATE master_unit 
             SET is_setup_unit = true 
-            WHERE id IN (${unitPlaceholders});
+            WHERE (unit_no, type) IN (${conditions});
         `;
-    
+
         try {
-            await db.query(updateUnitQuery, unitCodes);
+            await db.query(updateUnitQuery, values);
             return true
         } catch (error) {
             console.error('Error updating data:', error);
         }
-
     } catch (error) {
         console.log(error)
         return false

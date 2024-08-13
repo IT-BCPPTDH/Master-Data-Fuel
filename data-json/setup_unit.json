@@ -1,172 +1,676 @@
 {
         "setup_unit": [
-            3,
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10,
-            11,
-            12,
-            13,
-            14,
-            15,
-            17,
-            18,
-            19,
-            20,
-            21,
-            23,
-            24,
-            25,
-            26,
-            30,
-            31,
-            32,
-            33,
-            35,
-            37,
-            40,
-            41,
-            42,
-            46,
-            47,
-            48,
-            49,
-            50,
-            51,
-            52,
-            55,
-            56,
-            58,
-            59,
-            60,
-            62,
-            65,
-            67,
-            68,
-            69,
-            70,
-            71,
-            72,
-            73,
-            75,
-            77,
-            78,
-            79,
-            80,
-            81,
-            82,
-            83,
-            84,
-            85,
-            86,
-            87,
-            88,
-            89,
-            90,
-            91,
-            92,
-            93,
-            94,
-            95,
-            97,
-            98,
-            100,
-            101,
-            102,
-            103,
-            104,
-            105,
-            106,
-            107,
-            109,
-            111,
-            113,
-            116,
-            117,
-            124,
-            125,
-            127,
-            128,
-            129,
-            130,
-            131,
-            132,
-            144,
-            145,
-            146,
-            147,
-            148,
-            149,
-            150,
-            152,
-            153,
-            155,
-            157,
-            158,
-            159,
-            160,
-            161,
-            163,
-            164,
-            165,
-            166,
-            168,
-            170,
-            171,
-            174,
-            175,
-            176,
-            177,
-            178,
-            179,
-            180,
-            222,
-            223,
-            224,
-            225,
-            227,
-            230,
-            233,
-            234,
-            235,
-            236,
-            243,
-            244,
-            245,
-            246,
-            250,
-            251,
-            252,
-            253,
-            254,
-            255,
-            256,
-            257,
-            258,
-            259,
-            260,
-            261,
-            262,
-            263,
-            264,
-            265,
-            266,
-            267,
-            268,
-            269,
-            270,
-            271,
-            272,
-            273,
-            274,
-            275,
-            276,
-            277,
-            278,
-            279
+            {
+                "unit_no": "EX6010",
+                "type": "EX3600"
+            },
+            {
+                "unit_no": "EX5034",
+                "type": "R9350"
+            },
+            {
+                "unit_no": "EX5035",
+                "type": "R9350"
+            },
+            {
+                "unit_no": "EX5033",
+                "type": "EX2600"
+            },
+            {
+                "unit_no": "EX4025",
+                "type": "PC2000"
+            },
+            {
+                "unit_no": "EX3075",
+                "type": "PC1250"
+            },
+            {
+                "unit_no": "EX3076",
+                "type": "PC1250"
+            },
+            {
+                "unit_no": "EX3001",
+                "type": "R9100"
+            },
+            {
+                "unit_no": "EX3002",
+                "type": "R9100"
+            },
+            {
+                "unit_no": "EX2050",
+                "type": "SY750H"
+            },
+            {
+                "unit_no": "EX1338",
+                "type": "SY500H"
+            },
+            {
+                "unit_no": "EX1341",
+                "type": "SY500H"
+            },
+            {
+                "unit_no": "EX1435",
+                "type": "SY365H"
+            },
+            {
+                "unit_no": "EX1436",
+                "type": "SY365H"
+            },
+            {
+                "unit_no": "EX1315",
+                "type": "SY215"
+            },
+            {
+                "unit_no": "EX1316",
+                "type": "SY215"
+            },
+            {
+                "unit_no": "EX1318",
+                "type": "SY215"
+            },
+            {
+                "unit_no": "EX1319",
+                "type": "SY215"
+            },
+            {
+                "unit_no": "EX1320",
+                "type": "SY215"
+            },
+            {
+                "unit_no": "EX1136",
+                "type": "ZX210"
+            },
+            {
+                "unit_no": "DT4017",
+                "type": "730E"
+            },
+            {
+                "unit_no": "DT4018",
+                "type": "730E"
+            },
+            {
+                "unit_no": "DT4019",
+                "type": "730E"
+            },
+            {
+                "unit_no": "DT4020",
+                "type": "730E"
+            },
+            {
+                "unit_no": "DT4022",
+                "type": "730E"
+            },
+            {
+                "unit_no": "DT4025",
+                "type": "730E"
+            },
+            {
+                "unit_no": "DT4031",
+                "type": "730E"
+            },
+            {
+                "unit_no": "DT4034",
+                "type": "730E"
+            },
+            {
+                "unit_no": "DT4035",
+                "type": "730E"
+            },
+            {
+                "unit_no": "DT4039",
+                "type": "730E"
+            },
+            {
+                "unit_no": "DT4041",
+                "type": "730E"
+            },
+            {
+                "unit_no": "DT4042",
+                "type": "730E"
+            },
+            {
+                "unit_no": "DT4043",
+                "type": "730E"
+            },
+            {
+                "unit_no": "DT4044",
+                "type": "730E"
+            },
+            {
+                "unit_no": "DT4045",
+                "type": "730E"
+            },
+            {
+                "unit_no": "DT4046",
+                "type": "730E"
+            },
+            {
+                "unit_no": "DT3162",
+                "type": "HD1500"
+            },
+            {
+                "unit_no": "DT3168",
+                "type": "HD1500"
+            },
+            {
+                "unit_no": "DT3240",
+                "type": "HD1500"
+            },
+            {
+                "unit_no": "DT3241",
+                "type": "HD1500"
+            },
+            {
+                "unit_no": "DT3245",
+                "type": "HD1500"
+            },
+            {
+                "unit_no": "DT3249",
+                "type": "HD1500"
+            },
+            {
+                "unit_no": "DT3251",
+                "type": "HD1500"
+            },
+            {
+                "unit_no": "DT3252",
+                "type": "HD1500"
+            },
+            {
+                "unit_no": "DT3253",
+                "type": "HD1500"
+            },
+            {
+                "unit_no": "DT3254",
+                "type": "HD1500"
+            },
+            {
+                "unit_no": "DT3256",
+                "type": "HD1500"
+            },
+            {
+                "unit_no": "DT3257",
+                "type": "HD1500"
+            },
+            {
+                "unit_no": "DT3259",
+                "type": "HD1500"
+            },
+            {
+                "unit_no": "DT3261",
+                "type": "HD1500"
+            },
+            {
+                "unit_no": "DT3262",
+                "type": "HD1500"
+            },
+            {
+                "unit_no": "DT3263",
+                "type": "HD1500"
+            },
+            {
+                "unit_no": "DT3264",
+                "type": "HD1500"
+            },
+            {
+                "unit_no": "DT3265",
+                "type": "HD1500"
+            },
+            {
+                "unit_no": "DT3266",
+                "type": "75131"
+            },
+            {
+                "unit_no": "DT3267",
+                "type": "75131"
+            },
+            {
+                "unit_no": "DT3268",
+                "type": "75131"
+            },
+            {
+                "unit_no": "DT3269",
+                "type": "75131"
+            },
+            {
+                "unit_no": "DT3271",
+                "type": "75131"
+            },
+            {
+                "unit_no": "DT3272",
+                "type": "75131"
+            },
+            {
+                "unit_no": "DT3273",
+                "type": "75131"
+            },
+            {
+                "unit_no": "DT2439",
+                "type": "HD785"
+            },
+            {
+                "unit_no": "DT2440",
+                "type": "HD785"
+            },
+            {
+                "unit_no": "DT2442",
+                "type": "HD785"
+            },
+            {
+                "unit_no": "DT2443",
+                "type": "HD785"
+            },
+            {
+                "unit_no": "DT2444",
+                "type": "HD785"
+            },
+            {
+                "unit_no": "DT2445",
+                "type": "HD785"
+            },
+            {
+                "unit_no": "DT2348",
+                "type": "HD465"
+            },
+            {
+                "unit_no": "DT2349",
+                "type": "HD465"
+            },
+            {
+                "unit_no": "DT2353",
+                "type": "HD465"
+            },
+            {
+                "unit_no": "DT2382",
+                "type": "HD465"
+            },
+            {
+                "unit_no": "DT2411",
+                "type": "HD465"
+            },
+            {
+                "unit_no": "DT2413",
+                "type": "HD465"
+            },
+            {
+                "unit_no": "DT2414",
+                "type": "HD465"
+            },
+            {
+                "unit_no": "DT2446",
+                "type": "HD465"
+            },
+            {
+                "unit_no": "DT2447",
+                "type": "HD465"
+            },
+            {
+                "unit_no": "DT2449",
+                "type": "HD465"
+            },
+            {
+                "unit_no": "DT2452",
+                "type": "HD465"
+            },
+            {
+                "unit_no": "DT2454",
+                "type": "HD465"
+            },
+            {
+                "unit_no": "DT2459",
+                "type": "HD465"
+            },
+            {
+                "unit_no": "DT2460",
+                "type": "HD465"
+            },
+            {
+                "unit_no": "DT1320",
+                "type": "HM400"
+            },
+            {
+                "unit_no": "DT1321",
+                "type": "HM400"
+            },
+            {
+                "unit_no": "DT1325",
+                "type": "HM400"
+            },
+            {
+                "unit_no": "DT1326",
+                "type": "HM400"
+            },
+            {
+                "unit_no": "DT1465",
+                "type": "HM400"
+            },
+            {
+                "unit_no": "DT1466",
+                "type": "HM400"
+            },
+            {
+                "unit_no": "DT1469",
+                "type": "HM400"
+            },
+            {
+                "unit_no": "TD1163",
+                "type": "D155"
+            },
+            {
+                "unit_no": "TD1186",
+                "type": "D155"
+            },
+            {
+                "unit_no": "TD1194",
+                "type": "D8T"
+            },
+            {
+                "unit_no": "TD1195",
+                "type": "D8T"
+            },
+            {
+                "unit_no": "TD1207",
+                "type": "D8T"
+            },
+            {
+                "unit_no": "TD1209",
+                "type": "D8T"
+            },
+            {
+                "unit_no": "TD3114",
+                "type": "D375"
+            },
+            {
+                "unit_no": "TD3130",
+                "type": "D375"
+            },
+            {
+                "unit_no": "GR3048",
+                "type": "14M"
+            },
+            {
+                "unit_no": "GR3049",
+                "type": "14M"
+            },
+            {
+                "unit_no": "GR3080",
+                "type": "STG230C"
+            },
+            {
+                "unit_no": "GR4069",
+                "type": "GD825"
+            },
+            {
+                "unit_no": "GR4071",
+                "type": "GD825"
+            },
+            {
+                "unit_no": "GR4086",
+                "type": "18M"
+            },
+            {
+                "unit_no": "GR5022",
+                "type": "24H"
+            },
+            {
+                "unit_no": "WT2069",
+                "type": "HD785 WT"
+            },
+            {
+                "unit_no": "WT3025",
+                "type": "777D WT"
+            },
+            {
+                "unit_no": "WT3027",
+                "type": "HD785 WT"
+            },
+            {
+                "unit_no": "DR3008",
+                "type": "D55SP"
+            },
+            {
+                "unit_no": "DR3016",
+                "type": "D50KS"
+            },
+            {
+                "unit_no": "PU3217",
+                "type": "MF420"
+            },
+            {
+                "unit_no": "PU3218",
+                "type": "MF420"
+            },
+            {
+                "unit_no": "PU3305",
+                "type": "MVCP150"
+            },
+            {
+                "unit_no": "PU3306",
+                "type": "MVCP150"
+            },
+            {
+                "unit_no": "PU3307",
+                "type": "MVCP150"
+            },
+            {
+                "unit_no": "PU3308",
+                "type": "MVCP150"
+            },
+            {
+                "unit_no": "PU3309",
+                "type": "MVCP150"
+            },
+            {
+                "unit_no": "EX1421",
+                "type": "SY500H"
+            },
+            {
+                "unit_no": "DT3243",
+                "type": "HD1500"
+            },
+            {
+                "unit_no": "DT3255",
+                "type": "HD1500"
+            },
+            {
+                "unit_no": "DT3270",
+                "type": "75131"
+            },
+            {
+                "unit_no": "DT1464",
+                "type": "HM400"
+            },
+            {
+                "unit_no": "TD1115",
+                "type": "D155"
+            },
+            {
+                "unit_no": "TD1197",
+                "type": "D8T"
+            },
+            {
+                "unit_no": "HDR4019",
+                "type": "MD6290"
+            },
+            {
+                "unit_no": "HDR4020",
+                "type": "SKF07"
+            },
+            {
+                "unit_no": "HDR2023",
+                "type": "D245"
+            },
+            {
+                "unit_no": "HCM1047",
+                "type": "BW211D"
+            },
+            {
+                "unit_no": "HEX1392",
+                "type": "PC200"
+            },
+            {
+                "unit_no": "HEX1482",
+                "type": "PC200"
+            },
+            {
+                "unit_no": "HEX1271",
+                "type": "320"
+            },
+            {
+                "unit_no": "HEX1261",
+                "type": "320"
+            },
+            {
+                "unit_no": "HTD1178",
+                "type": "D6R"
+            },
+            {
+                "unit_no": "HTD1126",
+                "type": "D85SS"
+            },
+            {
+                "unit_no": "HPU3343",
+                "type": "HH200"
+            },
+            {
+                "unit_no": "HPU3344",
+                "type": "HH200"
+            },
+            {
+                "unit_no": "HPU3345",
+                "type": "HH200"
+            },
+            {
+                "unit_no": "HPU3346",
+                "type": "HH200"
+            },
+            {
+                "unit_no": "EX5032",
+                "type": "EX2600"
+            },
+            {
+                "unit_no": "EX4042",
+                "type": "PC2000"
+            },
+            {
+                "unit_no": "DT2341",
+                "type": "HD785"
+            },
+            {
+                "unit_no": "DT2405",
+                "type": "HD785"
+            },
+            {
+                "unit_no": "DT2403",
+                "type": "HD785"
+            },
+            {
+                "unit_no": "DT1527",
+                "type": "P360"
+            },
+            {
+                "unit_no": "EX6009",
+                "type": "EX3600"
+            },
+            {
+                "unit_no": "DT1550",
+                "type": "P360"
+            },
+            {
+                "unit_no": "DT1541",
+                "type": "P360"
+            },
+            {
+                "unit_no": "DT1535",
+                "type": "P360"
+            },
+            {
+                "unit_no": "DT1530",
+                "type": "P360"
+            },
+            {
+                "unit_no": "DT1536",
+                "type": "P360"
+            },
+            {
+                "unit_no": "DT1529",
+                "type": "P360"
+            },
+            {
+                "unit_no": "DT1546",
+                "type": "P360"
+            },
+            {
+                "unit_no": "DT1537",
+                "type": "P360"
+            },
+            {
+                "unit_no": "DT1547",
+                "type": "P360"
+            },
+            {
+                "unit_no": "DT1549",
+                "type": "P360"
+            },
+            {
+                "unit_no": "DT1551",
+                "type": "P360"
+            },
+            {
+                "unit_no": "DT1531",
+                "type": "P360"
+            },
+            {
+                "unit_no": "DT1532",
+                "type": "P360"
+            },
+            {
+                "unit_no": "DT1533",
+                "type": "P360"
+            },
+            {
+                "unit_no": "DT1534",
+                "type": "P360"
+            },
+            {
+                "unit_no": "DT1548",
+                "type": "P360"
+            },
+            {
+                "unit_no": "DT1540",
+                "type": "P360"
+            },
+            {
+                "unit_no": "TD1196",
+                "type": "D8T"
+            },
+            {
+                "unit_no": "HPU3358",
+                "type": "HH200"
+            },
+            {
+                "unit_no": "HPU3357",
+                "type": "HH200"
+            },
+            {
+                "unit_no": "HPU3365",
+                "type": "MF420"
+            },
+            {
+                "unit_no": "HPU3372",
+                "type": "MF420"
+            },
+            {
+                "unit_no": "HPU3301",
+                "type": "MF385GSS"
+            },
+            {
+                "unit_no": "DR2028",
+                "type": "IDM30"
+            },
+            {
+                "unit_no": "DT2354",
+                "type": "HD465"
+            }
         ]
 }
