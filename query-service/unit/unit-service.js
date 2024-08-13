@@ -67,8 +67,34 @@ const editUnit = async (updateFields) => {
     }
 }
 
+const editData = async (data) => {
+    try {
+        const unitCodes = data.setup_unit;
+
+        const unitPlaceholders = unitCodes.map((_, index) => `$${index + 1}`).join(', ');
+    
+        const updateUnitQuery = `
+            UPDATE master_unit 
+            SET is_setup_unit = true 
+            WHERE id IN (${unitPlaceholders});
+        `;
+    
+        try {
+            await db.query(updateUnitQuery, unitCodes);
+            return true
+        } catch (error) {
+            console.error('Error updating data:', error);
+        }
+
+    } catch (error) {
+        console.log(error)
+        return false
+    }
+}
+
 module.exports = {
     insertToUnit,
     bulkInsert,
-    editUnit
+    editUnit,
+    editData
 }

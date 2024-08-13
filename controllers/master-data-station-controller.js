@@ -1,7 +1,7 @@
 const db = require('../database/helper');
 const { HTTP_STATUS, STATUS_MESSAGE } = require('../helpers/enumHelper')
 const { QUERY_STRING } = require('../helpers/queryEnumHelper')
-const { insertToStation } = require('../query-service/station/station-service')
+const { insertToStation, editStation } = require('../query-service/station/station-service')
 const bulkData = require('../data-json/master_station.json')
 
 async function getAllStation() {
@@ -26,98 +26,98 @@ async function getAllStation() {
     }
 }
 
-// async function getDetailSite(id){
-//     try{
-//         const data = await db.query(QUERY_STRING.GET_DETAIL_SITE, [id])
+async function getDetailStation(id){
+    try{
+        const data = await db.query(QUERY_STRING.GET_DETAIL_STATION, [id])
 
-//         if(data){
-//             return {
-//               status: HTTP_STATUS.OK,
-//               data: data.rows,
-//               totalRow: data.rows.length
-//             };
-//         }else{
-//             return {
-//                 status: HTTP_STATUS.NOT_FOUND,
-//                 message: STATUS_MESSAGE.NOT_FOUND
-//               };
-//         }
-//     }catch(error){
-//         return {
-//             status: HTTP_STATUS.BAD_REQUEST,
-//             message: `${STATUS_MESSAGE.ERR_GET} ${error}`,
-//           };
-//     }
-// }
+        if(data){
+            return {
+              status: HTTP_STATUS.OK,
+              data: data.rows,
+              totalRow: data.rows.length
+            };
+        }else{
+            return {
+                status: HTTP_STATUS.NOT_FOUND,
+                message: STATUS_MESSAGE.NOT_FOUND
+              };
+        }
+    }catch(error){
+        return {
+            status: HTTP_STATUS.BAD_REQUEST,
+            message: `${STATUS_MESSAGE.ERR_GET} ${error}`,
+          };
+    }
+}
 
-// async function insertStations(postData) {
-//     try{
-//         const data = await insertToSite(postData)
+async function insertStation(postData) {
+    try{
+        const data = await insertToStation(postData)
 
-//         if(data){
-//             return {
-//               status: HTTP_STATUS.OK,
-//               message: STATUS_MESSAGE.CREATED_DATA
-//             };
-//         }else{
-//             return {
-//                 status: HTTP_STATUS.NOT_FOUND,
-//                 message: STATUS_MESSAGE.NOT_FOUND
-//               };
-//         }
-//     }catch(error){
-//         return {
-//             status: HTTP_STATUS.BAD_REQUEST,
-//             message: `${STATUS_MESSAGE.ERR_GET} ${error}`,
-//           };
-//     }
-// }
+        if(data){
+            return {
+              status: HTTP_STATUS.OK,
+              message: STATUS_MESSAGE.CREATED_DATA
+            };
+        }else{
+            return {
+                status: HTTP_STATUS.NOT_FOUND,
+                message: STATUS_MESSAGE.NOT_FOUND
+              };
+        }
+    }catch(error){
+        return {
+            status: HTTP_STATUS.BAD_REQUEST,
+            message: `${STATUS_MESSAGE.ERR_GET} ${error}`,
+          };
+    }
+}
 
-// async function updateSite(updateData){
-//     try{
-//         const data = await editSite(updateData)
+async function updateStation(updateData){
+    try{
+        const data = await editStation(updateData)
 
-//         if(data){
-//             return {
-//               status: HTTP_STATUS.OK,
-//               message: STATUS_MESSAGE.UPDATE_DATA
-//             };
-//         }else{
-//             return {
-//                 status: HTTP_STATUS.NOT_FOUND,
-//                 message: STATUS_MESSAGE.NOT_FOUND
-//               };
-//         }
-//     }catch(error){
-//         return {
-//             status: HTTP_STATUS.BAD_REQUEST,
-//             message: `${STATUS_MESSAGE.ERR_GET} ${error}`,
-//           };
-//     }
-// }
+        if(data){
+            return {
+              status: HTTP_STATUS.OK,
+              message: STATUS_MESSAGE.UPDATE_DATA
+            };
+        }else{
+            return {
+                status: HTTP_STATUS.NOT_FOUND,
+                message: STATUS_MESSAGE.NOT_FOUND
+              };
+        }
+    }catch(error){
+        return {
+            status: HTTP_STATUS.BAD_REQUEST,
+            message: `${STATUS_MESSAGE.ERR_GET} ${error}`,
+          };
+    }
+}
 
-// async function deleteSite(id){
-//     try{
-//         const data = await db.query(QUERY_STRING.DELETE_SITE, [id])
+async function deleteStation(id){
+    try{
+        const data = await db.query(QUERY_STRING.DELETE_SITE, [id])
 
-//         if(data){
-//             return {
-//               status: HTTP_STATUS.OK,
-//               message: STATUS_MESSAGE.DELETE_DATA
-//             };
-//         }else{
-//             return {
-//                 status: HTTP_STATUS.NOT_FOUND,
-//                 message: STATUS_MESSAGE.NOT_FOUND
-//               };
-//         }
-//     }catch(error){
-//         return {
-//             status: HTTP_STATUS.BAD_REQUEST,
-//             message: `${STATUS_MESSAGE.ERR_GET} ${error}`,
-//           };
-//     }
-// }
+        if(data){
+            return {
+              status: HTTP_STATUS.OK,
+              message: STATUS_MESSAGE.DELETE_DATA
+            };
+        }else{
+            return {
+                status: HTTP_STATUS.NOT_FOUND,
+                message: STATUS_MESSAGE.NOT_FOUND
+              };
+        }
+    }catch(error){
+        return {
+            status: HTTP_STATUS.BAD_REQUEST,
+            message: `${STATUS_MESSAGE.ERR_GET} ${error}`,
+          };
+    }
+}
 
 async function bulkInsert(){
     try{
@@ -164,10 +164,10 @@ async function getByName(dataSend){
 
 module.exports = { 
     getAllStation,
-    // getDetailSite,
-    // insertSite,
-    // updateSite,
-    // deleteSite,
+    getDetailStation,
+    insertStation,
+    updateStation,
+    deleteStation,
     bulkInsert,
     getByName
 };

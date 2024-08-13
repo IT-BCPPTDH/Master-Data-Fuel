@@ -5,21 +5,21 @@ async function handleGetAllStation(req,res){
     await handleResponseParams(req,res,masterController.getAllStation,0)
 }
 
-// async function handleInsertSite(req,res){
-//     await handleResponseJson(req,res,masterController.insertSite)
-// }
+async function handleInsertStation(req,res){
+    await handleResponseJson(req,res,masterController.insertStation)
+}
 
-// async function handleGetSite(req,res){
-//     await handleResponseParams(req,res,masterController.getDetailSite,1)
-// }
+async function handleGetStation(req,res){
+    await handleResponseParams(req,res,masterController.getDetailStation,1)
+}
 
-// async function handleDeleteSite(req,res){
-//     await handleResponseParams(req,res,masterController.deleteSite,1)
-// }
+async function handleDeleteStation(req,res){
+    await handleResponseParams(req,res,masterController.deleteStation,1)
+}
 
-// async function handleUpdateSite(req,res){
-//     await handleResponseJson(req,res,masterController.updateSite)
-// }
+async function handleUpdateStation(req,res){
+    await handleResponseJson(req,res,masterController.updateStation)
+}
 
 async function handleBulkInsertStation(req,res){
     await handleResponseParams(req,res,masterController.bulkInsert,0)
@@ -31,10 +31,10 @@ async function handleStationByName(req,res){
 
 module.exports = {
     handleGetAllStation,
-    // handleInsertSite,
-    // handleGetSite,
-    // handleDeleteSite,
-    // handleUpdateSite,
+    handleInsertStation,
+    handleGetStation,
+    handleDeleteStation,
+    handleUpdateStation,
     handleBulkInsertStation,
     handleStationByName
 }

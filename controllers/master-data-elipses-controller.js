@@ -1,12 +1,35 @@
 const db = require('../database/helper');
 const { HTTP_STATUS, STATUS_MESSAGE } = require('../helpers/enumHelper')
 const { QUERY_STRING } = require('../helpers/queryEnumHelper')
-const { insertToUnit, editUnit, editData } = require('../query-service/unit/unit-service')
-const dataUnit  = require('../data-json/setup_unit.json')
+const { insertToMasterElipse, editMasterElipse } = require('../query-service/master-elipse/master-elipse-service')
 
-async function getAllUnit() {
+
+async function getAllMasterElipse() {
     try{
-        const data = await db.query(QUERY_STRING.GET_ALL_UNIT)
+        const data = await db.query(QUERY_STRING.GET_ALL_MASTER_ELIPSE)
+        if(data){
+            return {
+              status: HTTP_STATUS.OK,
+              data: data.rows
+            };
+        }else{
+            return {
+                status: HTTP_STATUS.NOT_FOUND,
+                message: STATUS_MESSAGE.NOT_FOUND
+              };
+        }
+    }catch(error){
+        return {
+            status: HTTP_STATUS.BAD_REQUEST,
+            message: `${STATUS_MESSAGE.ERR_GET} ${error}`,
+          };
+    }
+}
+
+async function getDetailMasterElipse(id){
+    try{
+        const data = await db.query(QUERY_STRING.GET_DETAIL_MASTER_ELIPSE, [id])
+
         if(data){
             return {
               status: HTTP_STATUS.OK,
@@ -27,33 +50,9 @@ async function getAllUnit() {
     }
 }
 
-async function getDetailUnit(id){
+async function insertMasterElipse(postData) {
     try{
-        const data = await db.query(QUERY_STRING.GET_DETAIL_UNIT, [id])
-
-        if(data){
-            return {
-              status: HTTP_STATUS.OK,
-              data: data.rows,
-              totalRow: data.rows.length
-            };
-        }else{
-            return {
-                status: HTTP_STATUS.NOT_FOUND,
-                message: STATUS_MESSAGE.NOT_FOUND
-              };
-        }
-    }catch(error){
-        return {
-            status: HTTP_STATUS.BAD_REQUEST,
-            message: `${STATUS_MESSAGE.ERR_GET} ${error}`,
-          };
-    }
-}
-
-async function insertUnit(postData) {
-    try{
-        const data = await insertToUnit(postData)
+        const data = await insertToMasterElipse(postData)
 
         if(data){
             return {
@@ -74,9 +73,9 @@ async function insertUnit(postData) {
     }
 }
 
-async function updateUnit(updateData){
+async function updateMasterElipse(updateData){
     try{
-        const data = await editUnit(updateData)
+        const data = await editMasterElipse(updateData)
 
         if(data){
             return {
@@ -97,9 +96,9 @@ async function updateUnit(updateData){
     }
 }
 
-async function deleteUnit(id){
+async function deleteMasterElipse(id){
     try{
-        const data = await db.query(QUERY_STRING.DELETE_UNIT, [id])
+        const data = await db.query(QUERY_STRING.DELETE_MASTER_ELIPSE, [id])
 
         if(data){
             return {
@@ -120,11 +119,11 @@ async function deleteUnit(id){
     }
 }
 
-async function bulkInsert(bulkData){
+async function bulkInsert(){
     try{
         for (let index = 0; index < bulkData.length; index++) {
             const element = bulkData[index];
-            const inserted = await insertToUnit(element)
+            const inserted = await insertToMasterElipse(element)
           }
         
           return {
@@ -139,76 +138,12 @@ async function bulkInsert(bulkData){
     }
 }
 
-async function conditionalUnit(arrayData) {
-    try{
-    
-        const data = await db.query(QUERY_STRING.GET_UNIT_TRUCK, [arrayData])
-        
-        if(data){
-            return {
-              status: HTTP_STATUS.OK,
-              data: data.rows,
-              totalRow: data.rows.length
-            };
-        }else{
-            return {
-                status: HTTP_STATUS.NOT_FOUND,
-                message: STATUS_MESSAGE.NOT_FOUND
-              };
-        }
-    }catch(error){
-        return {
-            status: HTTP_STATUS.BAD_REQUEST,
-            message: `${STATUS_MESSAGE.ERR_GET} ${error}`,
-          };
-    }
-}
-
-const conditionalUnitProto = async(call,callback) => {
-    
-    let data = await db.query(QUERY_STRING.GET_UNIT_TRUCK, [call.request.data])
-
-    if(data.rows.length > 0){
-        data = JSON.stringify(data.rows,null,3)
-        
-        let result = {data:data}
-        callback(null,result)
-    }else{
-        let result = {data:[]}
-        callback(null,result)
-    }
-}
-
-async function updateSetupUnit(){
-    try{
-        const data = await editData(dataUnit)
-        if(data){
-            return {
-              status: HTTP_STATUS.OK,
-              message: STATUS_MESSAGE.UPDATE_DATA
-            };
-        }else{
-            return {
-                status: HTTP_STATUS.NOT_FOUND,
-                message: STATUS_MESSAGE.NOT_FOUND
-              };
-        }
-    }catch(error){
-        return {
-            status: HTTP_STATUS.BAD_REQUEST,
-            message: `${STATUS_MESSAGE.ERR_GET} ${error}`,
-          };
-    }
-}
 
 module.exports = { 
-    getAllUnit,
-    getDetailUnit,
-    insertUnit,
-    updateUnit,
-    deleteUnit,
-    bulkInsert,
-    conditionalUnit,
-    conditionalUnitProto,
-    updateSetupUnit
+    getAllMasterElipse,
+    getDetailMasterElipse,
+    insertMasterElipse,
+    updateMasterElipse,
+    deleteMasterElipse,
+    bulkInsert
 };

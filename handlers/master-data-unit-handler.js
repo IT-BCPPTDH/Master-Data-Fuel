@@ -29,6 +29,10 @@ async function handleConditionalUnit(req,res){
     await handleResponseJson(req,res,masterController.conditionalUnit)
 }
 
+async function handleUnitRole(req,res){
+    await handleResponseParams(req,res,masterController.updateSetupUnit, 0)
+}
+
 module.exports = {
     handleGetAllUnit,
     handleInsertUnit,
@@ -36,5 +40,6 @@ module.exports = {
     handleDeleteUnit,
     handleUpdateUnit,
     handleBulkInsertUnit,
-    handleConditionalUnit
+    handleConditionalUnit,
+    handleUnitRole
 }

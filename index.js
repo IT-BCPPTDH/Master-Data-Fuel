@@ -12,6 +12,9 @@ const masterDataTruckFactorRoutes = require('./routes/master-data-truck-factor-r
 const masterDataUnitRoutes = require('./routes/master-data-unit-routes')
 const masterDataOperatorRoutes = require('./routes/master-data-operator-routes')
 const masterDataStationRoutes = require('./routes/master-data-station-routes')
+const masterDataSonding = require('./routes/master-data-sonding-routes')
+const masterDataUnitBanlaws = require('./routes/master-data-unit-banlaws-routes')
+const masterDataMasterElipses = require('./routes/master-data-elipses-routes')
 
 require('dotenv').config();
 require('./proto/server/server')
@@ -66,6 +69,12 @@ masterDataTruckFactorRoutes(app)
 masterDataOperatorRoutes(app)
 
 masterDataStationRoutes(app)
+
+masterDataSonding(app)
+
+masterDataUnitBanlaws(app)
+
+masterDataMasterElipses(app)
 
 // // WebSocket route 
 // websocketRoute(app)
