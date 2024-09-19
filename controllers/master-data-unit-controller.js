@@ -224,6 +224,42 @@ async function getAllUnitLV() {
     }
 }
 
+async function getAllEquipment() {
+    try{
+        const dataUnit = await db.query(QUERY_STRING.GET_ALL_UNIT)
+        const dataElipses = await db.query(QUERY_STRING.GET_ALL_MASTER_ELIPSE)
+
+        const margeData = dataUnit.rows.map((itemA)=> {
+            const matchedItemB = dataElipses.rows.find((itemB) => itemA.unit_no === itemB.equip_no_unit);
+            if (matchedItemB) {
+                return {
+                  ...itemA,
+                  tank_cap: matchedItemB.equip_cap_tank,
+                };
+              } else {
+                return itemA;
+              }
+        })
+        if(margeData){
+            return {
+              status: HTTP_STATUS.OK,
+              data: margeData,
+              totalRow: margeData.length
+            };
+        }else{
+            return {
+                status: HTTP_STATUS.NOT_FOUND,
+                message: STATUS_MESSAGE.NOT_FOUND
+              };
+        }
+    }catch(error){
+        return {
+            status: HTTP_STATUS.BAD_REQUEST,
+            message: `${STATUS_MESSAGE.ERR_GET} ${error}`,
+          };
+    }
+}
+
 module.exports = { 
     getAllUnit,
     getDetailUnit,
@@ -234,5 +270,6 @@ module.exports = {
     conditionalUnit,
     conditionalUnitProto,
     updateSetupUnit,
-    getAllUnitLV
+    getAllUnitLV,
+    getAllEquipment
 };

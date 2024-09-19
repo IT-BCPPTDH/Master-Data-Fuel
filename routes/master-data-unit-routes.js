@@ -10,4 +10,5 @@ module.exports = (app) => {
     app.get('/master/unit/bulk-insert',(req,res) => masterDataHandler.handleBulkInsertUnit(req,res));
     app.post('/master/unit/fetch-data',(req,res) => masterDataHandler.handleConditionalUnit(req,res));
     app.get('/master/unit/get-hlv',(req,res) => masterDataHandler.handleGetUnitHLV(req,res));
+    app.get('/master/unit/get-equip',(req,res) => masterDataHandler.handleListUnit(req,res));
 };

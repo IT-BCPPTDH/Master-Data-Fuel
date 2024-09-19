@@ -2,13 +2,27 @@ const db = require('../../database/helper');
 const knex = require('knex');
 const knexConfig = require('../../knexfile');
 const dbKnex = knex(knexConfig);
-const { QUERY_STRING } = require('../../helpers/queryEnumHelper')
+const { QUERY_STRING } = require('../../helpers/queryEnumHelper');
+const { getAllMasterElipse, updateMasterElipse } = require('../../controllers/master-data-elipses-controller');
+const { getAllUnit } = require('../../controllers/master-data-unit-controller');
 
 const insertToUnit = async (dataJson) => {
     try {
         const result = await db.query(QUERY_STRING.CREATE_UNIT, [dataJson.unit_no,
         dataJson.type, dataJson.brand, dataJson.category, dataJson.owner,
         dataJson.usage, dataJson.site, dataJson.operator])
+
+        if(dataJson.tank_cap){
+            const getDataElipse = await getAllMasterElipse()
+            const findData = getDataElipse.data.find((item) => item.equip_no_unit === dataJson.unit_no)
+            if(findData){
+                const newData = {
+                    equip_no_unit : findData.equip_no_unit,
+                    equip_cap_tank : dataJson.tank_cap
+                }
+                await updateMasterElipse(newData)
+            }
+        }
 
         if(result){
             return true
@@ -42,18 +56,30 @@ const bulkInsert = async (dataJson) => {
 const editUnit = async (updateFields) => {
     try {
         const setClauses = Object.keys(updateFields)
-            .filter(field => field !== 'id')  
-            .map((field, index) => `${field} = $${index + 1}`)
-            .join(', ');
+          .filter(field => field !== 'id' && field !== 'tank_cap') 
+          .map((field, index) => `${field} = $${index + 1}`)
+          .join(', ');
 
         const values = Object.keys(updateFields)
-            .filter(field => field !== 'id')
-            .map(field => updateFields[field]);
+          .filter(field => field !== 'id' && field !== 'tank_cap') 
+          .map(field => updateFields[field]);
 
         values.push(updateFields.id);
 
         const query = `UPDATE master_unit SET ${setClauses} WHERE id = $${values.length}`;
         const result = await db.query(query, values)
+
+        if(updateFields.tank_cap){
+            const getData = await getAllUnit()
+            const findData = getData.data((item)=> item.id === updateFields.id)
+            if(findData){
+                const newData = {
+                    equip_no_unit : findData.equip_no_unit,
+                    equip_cap_tank : updateFields.tank_cap
+                }
+                await updateMasterElipse(newData)
+            }
+        }
 
         if(result){
             return true
