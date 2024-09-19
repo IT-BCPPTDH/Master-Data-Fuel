@@ -201,6 +201,29 @@ async function updateSetupUnit(){
     }
 }
 
+async function getAllUnitLV() {
+    try{
+        const data = await db.query(QUERY_STRING.GET_LV_HLV)
+        if(data){
+            return {
+              status: HTTP_STATUS.OK,
+              data: data.rows,
+              totalRow: data.rows.length
+            };
+        }else{
+            return {
+                status: HTTP_STATUS.NOT_FOUND,
+                message: STATUS_MESSAGE.NOT_FOUND
+              };
+        }
+    }catch(error){
+        return {
+            status: HTTP_STATUS.BAD_REQUEST,
+            message: `${STATUS_MESSAGE.ERR_GET} ${error}`,
+          };
+    }
+}
+
 module.exports = { 
     getAllUnit,
     getDetailUnit,
@@ -210,5 +233,6 @@ module.exports = {
     bulkInsert,
     conditionalUnit,
     conditionalUnitProto,
-    updateSetupUnit
+    updateSetupUnit,
+    getAllUnitLV
 };

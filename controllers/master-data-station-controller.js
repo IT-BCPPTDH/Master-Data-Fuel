@@ -98,7 +98,7 @@ async function updateStation(updateData){
 
 async function deleteStation(id){
     try{
-        const data = await db.query(QUERY_STRING.DELETE_SITE, [id])
+        const data = await db.query(QUERY_STRING.DELETE_STATION, [id])
 
         if(data){
             return {

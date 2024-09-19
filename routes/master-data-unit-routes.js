@@ -9,4 +9,5 @@ module.exports = (app) => {
     app.patch('/master/unit/edit',(req,res) => masterDataHandler.handleUpdateUnit(req,res));
     app.get('/master/unit/bulk-insert',(req,res) => masterDataHandler.handleBulkInsertUnit(req,res));
     app.post('/master/unit/fetch-data',(req,res) => masterDataHandler.handleConditionalUnit(req,res));
+    app.get('/master/unit/get-hlv',(req,res) => masterDataHandler.handleGetUnitHLV(req,res));
 };
