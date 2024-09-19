@@ -37,6 +37,10 @@ async function handleGetUnitHLV(req,res){
     await handleResponseParams(req,res,masterController.getAllUnitLV, 0)
 }
 
+async function handleListUnit(req,res){
+    await handleResponseParams(req,res,masterController.getAllEquipment,0)
+}
+
 module.exports = {
     handleGetAllUnit,
     handleInsertUnit,
@@ -46,5 +50,6 @@ module.exports = {
     handleBulkInsertUnit,
     handleConditionalUnit,
     handleUnitRole,
-    handleGetUnitHLV
+    handleGetUnitHLV,
+    handleListUnit
 }
