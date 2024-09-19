@@ -10,7 +10,8 @@ const QUERY_STRING = {
     GET_ALL_PROD_BUDGET: `SELECT * FROM master_prod_budget`,
     GET_ALL_OPERATOR: `SELECT * FROM master_operator_kimper WHERE "isDelete" = false ORDER BY id ASC `,
     GET_ALL_OPERATOR_UNIT: `SELECT * FROM master_unit WHERE unit_no = $1`,
-    GET_ALL_STATION: `SELECT * FROM master_station WHERE "isDelete" = false`,
+    GET_ALL_STATION: `SELECT * FROM master_station WHERE "isDelete" = false order by id DESC`,
+    GET_LV_HLV:`select * from master_unit mu where unit_no like 'LV%' or unit_no like 'HLV%' and "isDelete" = false`,
 
     GET_DETAIL_ACTIVITY:`SELECT * FROM master_activity WHERE id = $1`,
     GET_DETAIL_UNIT:`SELECT * FROM master_unit WHERE id = $1`,
@@ -49,15 +50,15 @@ const QUERY_STRING = {
     GET_DETAIL_STATION:`SELECT * FROM master_station WHERE id = $1 AND "isDelete" = false`,
     DELETE_STATION: `UPDATE master_station SET "isDelete" = true WHERE id = $1`,
 
-    GET_ALL_SONDING_MASTER: `SELECT * FROM master_sonding WHERE "isDelete" = false`,
+    GET_ALL_SONDING_MASTER: `SELECT * FROM master_sonding WHERE "isDelete" = false order by id ASC`,
     GET_DETAIL_SONDING_MASTER:`SELECT * FROM master_sonding WHERE id = $1 AND "isDelete" = false`,
     DELETE_SONDING_MASTER: `UPDATE master_sonding SET "isDelete" = true WHERE id = $1`,
 
-    GET_ALL_UNIT_BANLAW: `SELECT * FROM master_unit_banlaws WHERE "isDelete" = false`,
+    GET_ALL_UNIT_BANLAW: `SELECT * FROM master_unit_banlaws WHERE "isDelete" = false order by id ASC`,
     GET_DETAIL_UNIT_BANLAW:`SELECT * FROM master_unit_banlaws WHERE id = $1 AND "isDelete" = false`,
     DELETE_UNIT_BANLAW: `UPDATE master_unit_banlaws SET "isDelete" = true WHERE id = $1`,
 
-    GET_ALL_MASTER_ELIPSE: `SELECT * FROM master_elipses WHERE "isDelete" = false`,
+    GET_ALL_MASTER_ELIPSE: `SELECT * FROM master_elipses WHERE "isDelete" = false order by id ASC`,
     GET_DETAIL_MASTER_ELIPSE:`SELECT * FROM master_elipses WHERE id = $1 AND "isDelete" = false`,
     DELETE_MASTER_ELIPSE: `UPDATE master_elipses SET "isDelete" = true WHERE id = $1`,
 
