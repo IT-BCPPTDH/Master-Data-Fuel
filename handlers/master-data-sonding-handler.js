@@ -25,11 +25,16 @@ async function handleBulkInsertSondingMaster(req,res){
     await handleResponseParams(req,res,masterController.bulkInsert,0)
 }
 
+async function handleByStation(req,res){
+    await handleResponseParams(req,res,masterController.getByStation,1)
+}
+
 module.exports = {
     handleGetAllSondingMaster,
     handleInsertSondingMaster,
     handleGetSondingMaster,
     handleDeleteSondingMaster,
     handleUpdateSondingMaster,
-    handleBulkInsertSondingMaster
+    handleBulkInsertSondingMaster,
+    handleByStation
 }

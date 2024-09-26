@@ -53,6 +53,8 @@ const QUERY_STRING = {
     GET_ALL_SONDING_MASTER: `SELECT * FROM master_sonding WHERE "isDelete" = false order by id ASC`,
     GET_DETAIL_SONDING_MASTER:`SELECT * FROM master_sonding WHERE id = $1 AND "isDelete" = false`,
     DELETE_SONDING_MASTER: `UPDATE master_sonding SET "isDelete" = true WHERE id = $1`,
+    GET_LAST_SONDING_MASTER: `SELECT station, cm, liters FROM master_sonding WHERE "isDelete" = false and station = $1 
+    order by updated_at desc`,
 
     GET_ALL_UNIT_BANLAW: `SELECT * FROM master_unit_banlaws WHERE "isDelete" = false order by id ASC`,
     GET_DETAIL_UNIT_BANLAW:`SELECT * FROM master_unit_banlaws WHERE id = $1 AND "isDelete" = false`,
