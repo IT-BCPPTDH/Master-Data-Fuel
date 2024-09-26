@@ -138,6 +138,28 @@ async function bulkInsert(){
     }
 }
 
+async function getByStation(params) {
+    try{
+        const data = await db.query(QUERY_STRING.GET_LAST_SONDING_MASTER, [params])
+        if(data){
+            return {
+              status: HTTP_STATUS.OK,
+              data: data.rows
+            };
+        }else{
+            return {
+                status: HTTP_STATUS.NOT_FOUND,
+                message: STATUS_MESSAGE.NOT_FOUND
+              };
+        }
+    }catch(error){
+        return {
+            status: HTTP_STATUS.BAD_REQUEST,
+            message: `${STATUS_MESSAGE.ERR_GET} ${error}`,
+          };
+    }
+}
+
 
 module.exports = { 
     getAllSondingMaster,
@@ -145,5 +167,6 @@ module.exports = {
     insertSondingMaster,
     updateSondingMaster,
     deleteSondingMaster,
-    bulkInsert
+    bulkInsert,
+    getByStation
 };
