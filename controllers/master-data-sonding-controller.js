@@ -1,6 +1,7 @@
 const db = require('../database/helper');
 const { HTTP_STATUS, STATUS_MESSAGE } = require('../helpers/enumHelper')
 const { QUERY_STRING } = require('../helpers/queryEnumHelper')
+const bulkData = require('../data-json/master_sonding.json')
 const { insertToSonding, editSondingMaster } = require('../query-service/sonding-master/sonding-master-service')
 
 
