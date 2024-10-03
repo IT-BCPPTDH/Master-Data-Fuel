@@ -1,5 +1,5 @@
 const uWS = require('uWebSockets.js');
-const masterDataRoutes = require('./routes/master-data-routes')
+// const masterDataRoutes = require('./routes/master-data-routes')
 
 const masterDataActivityRoutes = require('./routes/master-data-activity-routes')
 const masterDataBucketCapRoutes = require('./routes/master-data-bucket-cap-routes')
@@ -46,7 +46,7 @@ app.get('/', (res, req) => {
 })
 
 // routes
-masterDataRoutes(app);
+// masterDataRoutes(app);
 
 masterDataActivityRoutes(app)
 
