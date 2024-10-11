@@ -224,6 +224,19 @@ async function getAllUnitLV() {
     }
 }
 
+async function getAllUnitLVProto(call,callback) {
+    let data = await db.query(QUERY_STRING.GET_LV_HLV)
+    if(data.rows.length > 0){
+        data = JSON.stringify(data.rows,null,3)
+        
+        let result = {data:data}
+        callback(null,result)
+    }else{
+        let result = {data:[]}
+        callback(null,result)
+    }
+}
+
 async function getAllEquipment() {
     try{
         const dataUnit = await db.query(QUERY_STRING.GET_ALL_UNIT)
@@ -271,5 +284,6 @@ module.exports = {
     conditionalUnitProto,
     updateSetupUnit,
     getAllUnitLV,
-    getAllEquipment
+    getAllEquipment,
+    getAllUnitLVProto
 };
