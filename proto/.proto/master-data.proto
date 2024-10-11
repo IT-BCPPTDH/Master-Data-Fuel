@@ -8,6 +8,7 @@ service Greeter {
   // Sends a greeting
   rpc getTruckFactor (Empty) returns (TFRes) {};
   rpc getUnit (arr) returns (TFRes) {};
+  rpc getUnitLvProto (Empty) returns (TFRes) {};
 }
 
 message Empty {}
