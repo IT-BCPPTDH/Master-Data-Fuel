@@ -138,6 +138,22 @@ async function bulkInsert(){
     }
 }
 
+async function filterBanlaws(call,callback) {
+    let data = await db.query(QUERY_STRING.GET_ALL_UNIT_BANLAW)
+
+    const filteredData = data.rows.filter(item => call.request.data.includes(item.unit_elipse));
+
+    if(data.rows.length > 0){
+        data = JSON.stringify(filteredData,null,3)
+        
+        let result = {data:data}
+        callback(null,result)
+    }else{
+        let result = {data:[]}
+        callback(null,result)
+    }
+}
+
 
 module.exports = { 
     getAllUnitBanlaw,
@@ -145,5 +161,6 @@ module.exports = {
     insertUnitBanlaw,
     updateUnitBanlaw,
     deleteUnitBanlaw,
-    bulkInsert
+    bulkInsert,
+    filterBanlaws
 };

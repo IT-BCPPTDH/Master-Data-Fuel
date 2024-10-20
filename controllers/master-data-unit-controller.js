@@ -273,6 +273,20 @@ async function getAllEquipment() {
     }
 }
 
+async function getAllEquip(call,callback) {
+    let data = await db.query(QUERY_STRING.GET_UNIT_EQUIP, [call.request.data])
+
+    if(data.rows.length > 0){
+        data = JSON.stringify(data.rows,null,3)
+        
+        let result = {data:data}
+        callback(null,result)
+    }else{
+        let result = {data:[]}
+        callback(null,result)
+    }
+}
+
 module.exports = { 
     getAllUnit,
     getDetailUnit,
@@ -285,5 +299,6 @@ module.exports = {
     updateSetupUnit,
     getAllUnitLV,
     getAllEquipment,
-    getAllUnitLVProto
+    getAllUnitLVProto,
+    getAllEquip
 };
