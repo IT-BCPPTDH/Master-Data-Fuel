@@ -138,6 +138,20 @@ async function bulkInsert(){
     }
 }
 
+async function getMdElipse(call,callback) {
+    let data = await db.query(QUERY_STRING.GET_FILTER_ELIPSE, [call.request.data])
+
+    if(data.rows.length > 0){
+        data = JSON.stringify(data.rows,null,3)
+        
+        let result = {data:data}
+        callback(null,result)
+    }else{
+        let result = {data:[]}
+        callback(null,result)
+    }
+}
+
 
 module.exports = { 
     getAllMasterElipse,
@@ -145,5 +159,6 @@ module.exports = {
     insertMasterElipse,
     updateMasterElipse,
     deleteMasterElipse,
-    bulkInsert
+    bulkInsert,
+    getMdElipse
 };

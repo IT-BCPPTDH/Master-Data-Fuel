@@ -1,7 +1,9 @@
 let grpc = require('@grpc/grpc-js');
 const MasterData = require('../config');
 const { getAllTruckFactorProto } = require('../../controllers/master-data-truck-controller');
-const { conditionalUnitProto, getAllUnitLVProto } = require('../../controllers/master-data-unit-controller');
+const { conditionalUnitProto, getAllUnitLVProto, getAllEquip } = require('../../controllers/master-data-unit-controller');
+const { filterBanlaws } = require('../../controllers/master-data-unit-banlaws.controller');
+const { getMdElipse } = require('../../controllers/master-data-elipses-controller');
 
 const server = new grpc.Server();
 server.addService(MasterData.Greeter.service,
@@ -9,6 +11,10 @@ server.addService(MasterData.Greeter.service,
     getTruckFactor: getAllTruckFactorProto,
     getUnit: conditionalUnitProto,
     getUnitLvProto: getAllUnitLVProto,
+    getEquipment: getAllEquip,
+    getFilterBanlaws: filterBanlaws, 
+    getFilterBanlaws: filterBanlaws, 
+    getMdElipse: getMdElipse,
   });
 
 server.bindAsync(process.env.grpcMasterDataDev, grpc.ServerCredentials.createInsecure(), () => {
