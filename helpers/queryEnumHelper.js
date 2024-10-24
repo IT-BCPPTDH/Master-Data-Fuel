@@ -64,7 +64,8 @@ const QUERY_STRING = {
     GET_DETAIL_MASTER_ELIPSE:`SELECT * FROM master_elipses WHERE id = $1 AND "isDelete" = false`,
     DELETE_MASTER_ELIPSE: `UPDATE master_elipses SET "isDelete" = true WHERE id = $1`,
 
-    GET_UNIT_EQUIP: `SELECT * FROM master_unit where "isDelete" = false and unit_no = ANY($1)`
+    GET_UNIT_EQUIP: `SELECT * FROM master_unit where "isDelete" = false and unit_no = ANY($1)`,
+    GET_FILTER_ELIPSE: `SELECT * FROM master_elipses where "isDelete" = false and equip_no_unit = ANY($1)`
 
 }
 
