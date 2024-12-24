@@ -35,7 +35,7 @@ const QUERY_STRING = {
     CREATE_MATERIAL: `INSERT INTO master_material (material_code, material_code_prod, material_name, treatment_factor, site, creation_by) VALUES ($1, $2, $3, $4, $5, $6)`,
 
     DELETE_ACTIVITY: `UPDATE master_activity SET "isDelete" = true WHERE id = $1`,
-    DELETE_UNIT: `UPDATE master_unit SET "isDelete" = true WHERE id = $1`,
+    DELETE_UNIT: `DELETE from master_unit WHERE id = $1`,
     DELETE_SITE: `UPDATE master_site SET "isDelete" = true WHERE id = $1`,
     DELETE_BUCKET_CAP: `UPDATE master_bucket_cap SET "isDelete" = true WHERE id = $1`,
     DELETE_HAULER_CAP: `UPDATE master_hauler_cap SET "isDelete" = true WHERE id = $1`,
