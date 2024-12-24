@@ -1,6 +1,6 @@
 const QUERY_STRING = {
     GET_ALL_ACTVITY: `SELECT * FROM master_activity`,
-    GET_ALL_UNIT: `SELECT * FROM master_unit`,
+    GET_ALL_UNIT: `SELECT * FROM master_unit WHERE "isDelete" = false ORDER BY id ASC`,
     GET_ALL_SITE: `SELECT * FROM master_site`,
     GET_ALL_MATERIAL: `SELECT * FROM master_material`,
     GET_ALL_LOCATION: `SELECT * FROM master_location`,
