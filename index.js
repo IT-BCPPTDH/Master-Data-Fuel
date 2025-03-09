@@ -15,6 +15,7 @@ const masterDataStationRoutes = require('./routes/master-data-station-routes')
 const masterDataSonding = require('./routes/master-data-sonding-routes')
 const masterDataUnitBanlaws = require('./routes/master-data-unit-banlaws-routes')
 const masterDataMasterElipses = require('./routes/master-data-elipses-routes')
+const masterDataOperatorFuel = require('./routes/master-operator-fuel-routes')
 
 require('dotenv').config();
 require('./proto/server/server')
@@ -75,6 +76,8 @@ masterDataSonding(app)
 masterDataUnitBanlaws(app)
 
 masterDataMasterElipses(app)
+
+masterDataOperatorFuel(app)
 
 // // WebSocket route 
 // websocketRoute(app)

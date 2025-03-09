@@ -12,6 +12,8 @@ const QUERY_STRING = {
     GET_ALL_OPERATOR_UNIT: `SELECT * FROM master_unit WHERE unit_no = $1`,
     GET_ALL_STATION: `SELECT * FROM master_station WHERE "isDelete" = false order by id DESC`,
     GET_LV_HLV:`select * from master_unit mu where unit_no like 'LV%' or unit_no like 'HLV%' and "isDelete" = false`,
+    CHECK_UNIT:`SELECT * FROM master_unit WHERE unit_no = $1`,
+    GET_FUEL_OPERATOR: `SELECT * FROM operator_fuel ORDER BY id ASC `,
 
     GET_DETAIL_ACTIVITY:`SELECT * FROM master_activity WHERE id = $1`,
     GET_DETAIL_UNIT:`SELECT * FROM master_unit WHERE id = $1`,
@@ -23,6 +25,8 @@ const QUERY_STRING = {
     GET_DETAIL_TRUCK_FACTOR:`SELECT * FROM master_truck_factor WHERE id = $1`,
     GET_DETAIL_PROD_BUDGET:`SELECT * FROM master_prod_budget WHERE id = $1`,
     GET_DETAIL_OPERATOR:`SELECT * FROM master_operator_kimper WHERE id = $1`,
+    GET_DETAIL_OPERATOR_FUEL:`SELECT * FROM operator_fuel WHERE id = $1`,
+    GET_OPERATOR_JDE:`SELECT * FROM operator_fuel WHERE "JDE" = $1`,
 
     CREATE_ACTIVITY: `INSERT INTO master_activity (activity_name, delay_description, code, creation_by) VALUES ($1, $2, $3, $4)`,
     CREATE_UNIT: `INSERT INTO master_unit (unit_no, type, brand, category, owner, usage, site, creation_by) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)`,
@@ -43,7 +47,7 @@ const QUERY_STRING = {
     DELETE_TRUCK_FACTOR: `UPDATE master_truck_factor SET "isDelete" = true WHERE id = $1`,
     DELETE_PROD_BUDGET: `UPDATE master_prod_budget SET "isDelete" = true WHERE id = $1`,
     DELETE_MATERIAL: `UPDATE master_material SET "isDelete" = true WHERE id = $1`,
-    DELETE_OPERATOR: `UPDATE master_operator_kimper SET "isDelete" = true WHERE id = $1`,
+    DELETE_OPERATOR: `DELETE FROM public.operator_fuel WHERE id = $1`,
 
     GET_UNIT_TRUCK : `SELECT * from public.fetch_unit_truck($1)`,
     GET_STATION_BY_NAME: `SELECT * FROM master_station WHERE fuel_station_name = $1 AND "isDelete" = false`,
@@ -66,6 +70,10 @@ const QUERY_STRING = {
 
     GET_UNIT_EQUIP: `SELECT * FROM master_unit where "isDelete" = false and unit_no = ANY($1)`,
     GET_FILTER_ELIPSE: `SELECT * FROM master_elipses where "isDelete" = false and equip_no_unit = ANY($1)`
+    // GET_FILTER_ELIPSE: `SELECT m.*
+    // FROM master_elipses m
+    // JOIN UNNEST($1::TEXT[]) u(equip_no_unit) ON m.equip_no_unit = u.equip_no_unit
+    // WHERE m."isDelete" = false;`
 
 }
 
