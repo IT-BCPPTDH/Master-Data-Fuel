@@ -29,29 +29,31 @@ const insertToMasterElipse = async (dataJson) => {
 
 const editMasterElipse = async (updateFields) => {
     try {
-        const setClauses = Object.keys(updateFields)
-            .filter(field => field !== 'id')  
+        // Filter field yang akan diupdate: bukan 'id' DAN nilainya bukan string kosong
+        const fieldsToUpdate = Object.keys(updateFields).filter(field =>
+            field !== 'id' && updateFields[field] !== ''
+        );
+
+        if (fieldsToUpdate.length === 0) {
+            return true; // Tidak ada yang perlu diupdate
+        }
+
+        const setClauses = fieldsToUpdate
             .map((field, index) => `${field} = $${index + 1}`)
             .join(', ');
 
-        const values = Object.keys(updateFields)
-            .filter(field => field !== 'id')
-            .map(field => updateFields[field]);
+        const values = fieldsToUpdate.map(field => updateFields[field]); // Tidak perlu konversi ke null lagi
 
         values.push(updateFields.id);
 
         const query = `UPDATE master_elipses SET ${setClauses} WHERE id = $${values.length}`;
-        const result = await db.query(query, values)
+        const result = await db.query(query, values);
 
-        if(result){
-            return true
-        }
-
-        return false
+        return result.rowCount > 0;
 
     } catch (error) {
-        console.log(error)
-        return false
+        console.error("Error in editMasterElipse:", error);
+        return false;
     }
 }
 
